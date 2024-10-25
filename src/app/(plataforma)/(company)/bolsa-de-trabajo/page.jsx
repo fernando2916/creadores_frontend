@@ -1,3 +1,4 @@
+import { Vacantes } from "../components/trabajo/Vacantes";
 
 export const metadata = {
   title: 'Bolsa de Trabajo'
@@ -5,8 +6,8 @@ export const metadata = {
 
 export default function VacantesPage() {
   return (
-    <div className="pt-[5rem]">
-      <h1>Vacantes Page</h1>
+    <div >
+      <Vacantes/>
     </div>
   );
 }

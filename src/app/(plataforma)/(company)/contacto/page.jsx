@@ -26,9 +26,9 @@ export default function ContactoPage() {
           <Image 
             src="/ideas.webp"
             alt="diseñadores"
-            width={1920}
-            height={1080}
-            className='opacity-30 object-cover static h-full'
+            width={500}
+            height={500}
+            className='opacity-30 object-cover static h-full w-full'
           />
           <div className="absolute w-full h-full flex flex-col -top-5 justify-center text-center">
             <div className="text-center p-3 space-y-1 md:space-y-7">
@@ -61,9 +61,9 @@ export default function ContactoPage() {
                   <h3 className="">Horario de Atención:</h3>
                 </div>
                 <p className="text-link-100">
-                  Lunes a Viernes : 9:00 am a 6:00 pm
+                  Lunes a Viernes : 10:00 am a 6:00 pm
                 </p>
-                <p className="text-link-100">Sábados : 10:00 am a 2:30 pm</p>
+                <p className="text-link-100">Sábados : 10:00 am a 1:00 pm</p>
               </div>
               <div className="flex flex-col lg:flex-row gap-2 items-center">
                 <div className="flex items-center gap-2">

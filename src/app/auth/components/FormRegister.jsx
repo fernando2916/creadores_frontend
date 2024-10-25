@@ -59,7 +59,7 @@ export const Registro = () => {
       .required("El apellido es obligatorio"),
     email: Yup.string()
       .email("El correo no es válido")
-      .required("El email es obligatorio"),
+      .required("El correo es obligatorio"),
     password: Yup.string()
       .min(
         8,
@@ -279,7 +279,7 @@ export const Registro = () => {
                 <button
                 // onClick={handleReset}
                   type="submit"
-                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2 items-cente"
+                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2"
                 >
                   <FaSignInAlt />
                   Crear Cuenta
