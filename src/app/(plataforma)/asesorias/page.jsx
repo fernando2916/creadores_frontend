@@ -11,9 +11,9 @@ export default function AsesoriasPage() {
           <Image
             src="/tutor.webp"
             alt="diseñadores"
-            className="opacity-40 object-cover "
-            width={1920}
-            height={1080}
+            className="opacity-40 object-cover w-full h-full "
+            width={500}
+            height={500}
           />
           <div className="absolute w-full h-full flex flex-col top-0 items-center justify-center ">
             <div className="text-center p-3 space-y-3 md:space-y-7 relative lg:-top-24">

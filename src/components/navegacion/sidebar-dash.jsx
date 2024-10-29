@@ -1,4 +1,5 @@
 "use client";
+import { useAuthStore } from "@/hooks/useAuthStore";
 import Link from "next/link";
 
 import {
@@ -32,6 +33,9 @@ export const SidebarDash = ({ onClick: toggleMenu,
   const today = new Date();
   const reserv = today.getFullYear();
 
+  const {user, startLogout} = useAuthStore()
+
+
   return (
     <>
       <div>
@@ -62,8 +66,8 @@ export const SidebarDash = ({ onClick: toggleMenu,
               <FaUser className="text-3xl" />
             </div>
             <div>
-              <span className="text-2xl">Nombre </span>
-              <span className="text-2xl">Apellido</span>
+              <span className="text-2xl">{user.name} </span>
+              <span className="text-2xl">{user.last_name}</span>
               <div className="flex items-center gap-1">
                 <Link href="mi-cuenta" className="flex items-center gap-1">
                   <span className="text-base text-link-400">Mi Cuenta</span>
@@ -215,7 +219,7 @@ export const SidebarDash = ({ onClick: toggleMenu,
               >
                 <Link
                   href="/"
-                  // onClick={startLogout}
+                  onClick={startLogout}
                   className="flex items-center gap-3 p-3 text-lg"
                 >
                   <FaSignOutAlt />

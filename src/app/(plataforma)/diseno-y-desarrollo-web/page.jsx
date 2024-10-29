@@ -1,3 +1,8 @@
+import { FormCotizacion } from "./components/FormCotizacion";
+import { Header } from "./components/Header";
+import { Nosotros } from "./components/Nosotros";
+import { Portafolio } from "./components/Portafolio";
+import { Services } from "./components/Services";
 
 export const metadata = {
   title: 'Diseño y Desarrollo Web'
@@ -6,7 +11,13 @@ export const metadata = {
 export default function ProgramacionPage() {
   return (
     <div className="pt-[5rem]">
-      <h1>Programación Page</h1>
+      <Header/>
+      <main>
+        <Nosotros/>
+        <Services/>
+        <Portafolio/>
+        <FormCotizacion/>
+      </main>
     </div>
   );
 }

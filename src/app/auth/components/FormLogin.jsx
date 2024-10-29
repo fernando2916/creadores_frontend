@@ -8,7 +8,7 @@ import { useAuthStore } from "@/hooks/useAuthStore";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 
 
 const loginFormFields = {
@@ -40,7 +40,7 @@ export const Ingresar =() => {
 
   useEffect(() => {
     if (status === "Authenticated") {
-       redirect('/home');
+       redirect('/');
     }
   }, [status])
   

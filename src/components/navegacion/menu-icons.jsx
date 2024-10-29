@@ -20,8 +20,13 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 import { Button } from "../ui/button";
+import { useAuthStore } from '@/hooks/useAuthStore';
 
 export const MenuIcons = () => {
+
+  const {user, startLogout} = useAuthStore()
+
+
   return (
     <div>
         <ul className="flex items-center justify-center gap-4">
@@ -101,8 +106,8 @@ export const MenuIcons = () => {
                       <FaUserCircle className="text-3xl"/>
                       </div>
                       <div className="">
-                      <p className="text-sm">Nombre de usuario</p>
-                      <span className="text-link-100 text-xs">Correo Electrónico</span>
+                      <p className="text-sm">{user.name} {user.last_name}</p>
+                      <span className="text-link-100 text-xs">{user.email}</span>
                       </div>
                       </li>
                     <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
@@ -129,9 +134,12 @@ export const MenuIcons = () => {
                       <FaUserCog/>
                       Soporte
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-nav-700 p-2 gap-2">
+                      <button className="flex items-center gap-2" onClick={startLogout}>
+
                       <FaSignInAlt/>
                       Salir
+                      </button>
                       </li>
                   </ul>
                 </div>

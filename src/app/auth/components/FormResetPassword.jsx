@@ -74,6 +74,7 @@ export const RecuperarContraseña = () => {
                 type="submit"
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-600 gap-2 items-center"
               >
+                <p>Cargando...</p>
                 {/* <Oval
                   visible={true}
                   height="30"

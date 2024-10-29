@@ -7,15 +7,15 @@ const creadoresApi = axios.create({
     baseURL: API_URL,    
 });
 
-// creadoresApi.interceptors.request.use( config => {
-//     const token = localStorage.getItem('token')
+creadoresApi.interceptors.request.use( config => {
+    const token = localStorage.getItem('token')
     
-//     config.headers = {
-//         ...config.headers,
-//         Authorization: `Bearer ${token}`,
-//     }
-//     return config;
-// })
+    config.headers = {
+        ...config.headers,
+        Authorization: `Bearer ${token}`,
+    }
+    return config;
+})
 
 
 // Todo: configurar interceptores

@@ -40,7 +40,7 @@ export const Header = () => {
             <MenuPrincial/>
         </div>
         <div>
-        {status === 'Authenticado' ? (
+        {status === 'Authenticated' ? (
             <MenuIcons />
           ) : (
             <MenuAccount />

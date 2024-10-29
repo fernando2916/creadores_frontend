@@ -6,7 +6,7 @@ export const MenuMobile = ({onClick: toggleMenu,
    
   return (
     <aside>
-      {status === 'Authenticado' ? (
+      {status === 'Authenticated' ? (
         <SidebarDash onClick={toggleMenu} showMenu={showMenu} />
       ) : (
         <SidebarPrincipal onClick={toggleMenu} showMenu={showMenu} />
