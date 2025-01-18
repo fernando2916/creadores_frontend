@@ -6,6 +6,11 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { useAuthStore } from "@/hooks/useAuthStore";
 import {FaEnvelope} from 'react-icons/fa'
+import { Oval } from "react-loader-spinner";
+import { useEffect } from "react";
+
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.css'
 
 const resetCodeEmail = {
   email: "",
@@ -13,7 +18,7 @@ const resetCodeEmail = {
 
 export const RecuperarContraseña = () => {
   const dispatch = useDispatch();
-  const { reset_password, errorMessage, loading } = useAuthStore();
+  const { reset_password, errorMessage, loading, status, message } = useAuthStore();
 
   const resetSubmit = (values) => {
     dispatch(
@@ -28,6 +33,30 @@ export const RecuperarContraseña = () => {
       .email("El correo no es válido")
       .required("El correo es obligatiorio"),
   });
+
+  useEffect(() => {
+     if (status === "correo enviado") {
+      Swal.fire({
+        icon: "success",
+        title: message,
+        background: '#120024',
+        color: '#ffffff',
+  
+      })
+    }
+   }, [status])
+  
+   useEffect(() => {
+     if (status === "Solicitud Fallida") {
+      Swal.fire({
+        icon: "error",
+        title: errorMessage,
+        background: '#120024',
+        color: '#ffffff',
+  
+      })
+    }
+   }, [status])
 
   return (
     <>
@@ -74,8 +103,7 @@ export const RecuperarContraseña = () => {
                 type="submit"
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-600 gap-2 items-center"
               >
-                <p>Cargando...</p>
-                {/* <Oval
+                <Oval
                   visible={true}
                   height="30"
                   strokeWidth={4}
@@ -83,12 +111,13 @@ export const RecuperarContraseña = () => {
                   color="#fff"
                   secondaryColor="#6e004c"
                   ariaLabel="oval-loading"
-                /> */}
+                />
               </button>
             ) : (
               <button
+              disabled={loading}
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-600 gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-400 hover:bg-btn-600 gap-2 items-center"
               >
                 <FaEnvelope />
                 Restablecer contraseña
@@ -98,9 +127,11 @@ export const RecuperarContraseña = () => {
             <div className="">
               <p className="text-center mt-5 mb-3">
                 ¿Aún no tienes cuenta?{" "}
-                <button className="text-link-100 font-bold">
-                  <Link href="/auth/crear-cuenta">Crear cuenta</Link>
+                  <Link href="/auth/crear-cuenta">
+                <button disabled={loading} className="text-link-100 font-bold disabled:text-link-500">
+                  Crear cuenta
                 </button>
+                  </Link>
               </p>
             </div>
           </form>

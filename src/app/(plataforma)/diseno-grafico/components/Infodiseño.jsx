@@ -276,7 +276,7 @@ export const Infodiseño = () => {
             Hemos armado 3 paquetes que cumplen tus necesidades desde las
             básicas hasta los complementos impresos.
           </p>
-          <div className="grid my-10 gap-9 grid-cols-1  md:mx-64 mx-auto">
+          <div className="grid my-10 gap-9 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-max-7xl container mx-auto">
             {/* BASICO */}
             <div className="rounded-3xl p-8 xl:p-10 ring-1 ring-link-100 ">
               <div className=" flex items-center justify-between gap-4">

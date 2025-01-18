@@ -21,11 +21,11 @@ export const authSlice = createSlice({
     onRegister: (state, { payload }) => {
       state.status = 'Registrado'
       state.message = payload.message
-      state.errorMessage = payload.message
       state.loading = null
 
     },
     onRegisterFail: (state, { payload }) => {
+      state.status = 'Fallo el registro'
       state.errorMessage = payload.message
       state.loading = null
 
@@ -53,7 +53,7 @@ export const authSlice = createSlice({
     },
 
     onResetCodeFail: (state, {payload}) => {
-      state.status = 'solicitud faillida',
+      state.status = 'solicitud Fallida',
       state.errorMessage = payload.message
       state.loading = null
     },
@@ -98,7 +98,7 @@ export const authSlice = createSlice({
       
     },
     onLoginFail: ( state, { payload }) => {
-      state.status = 'not-Authenticated',
+      state.status = 'Credenciales Incorrectas',
       state.user = {},
       state.token = {},
       state.message = null

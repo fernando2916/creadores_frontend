@@ -10,6 +10,10 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { redirect } from "next/navigation";
 
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.css'
+import { Oval } from "react-loader-spinner";
+
 
 const loginFormFields = {
   email:    "",
@@ -18,8 +22,8 @@ const loginFormFields = {
 
 export const Ingresar =() => {
 
-  const [showPassword, setShowPassword] = useState(false)
-  
+  const [showPassword, setShowPassword] = useState(false);
+
   const { startLogin, errorMessage, message, status, loading } =
   useAuthStore();
   const dispatch = useDispatch()
@@ -38,6 +42,18 @@ export const Ingresar =() => {
     password: Yup.string().required("La contraseña es obligatoria"),
   });
 
+  useEffect(() => {
+    if (status === "Authenticated") {
+        Swal.fire({
+          icon: "success",
+          title: message,
+          background: '#120024',
+        color: '#ffffff',
+    
+        })
+      }
+  }, [status])
+  
   useEffect(() => {
     if (status === "Authenticated") {
        redirect('/');
@@ -133,8 +149,7 @@ export const Ingresar =() => {
                   type="submit"
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-600 gap-2 items-center"
                 >
-                  <p>Cargando...</p>
-                  {/* <Oval
+                  <Oval
                     visible={true}
                     height="30"
                     strokeWidth={4}
@@ -142,11 +157,12 @@ export const Ingresar =() => {
                     color="#fff"
                     secondaryColor="#6e004c"
                     ariaLabel="oval-loading"
-                  /> */}
+                  />
                 </button>
               ) : (
                 <button
                   type="submit"
+                  disabled={loading}
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2 items-center"
                 >
                   <FaUser />
@@ -157,9 +173,11 @@ export const Ingresar =() => {
             <div className=" border-t border-gray-500">
               <p className="text-center mt-5">
                 ¿No tienes una cuenta?{" "}
-                <button type="button" className="text-link-100 font-bold">
-                  <Link href="/auth/crear-cuenta">Crear cuenta</Link>
+                  <Link href="/auth/crear-cuenta">
+                <button disabled={loading} type="button" className="text-link-100 disabled:text-link-500 font-bold">
+                  Crear cuenta
                 </button>
+                  </Link>
               </p>
             </div>
           
@@ -170,8 +188,16 @@ export const Ingresar =() => {
         <span className="absolute justify-center font-semibold translatex-1/2 flex items-center bg-nav-800 rounded-md px-6 -top-[11px] left-[25%] sm:left-[25%]">O continuar con</span>
       </div>
       <div className="grid grid-cols-2 gap-5 mt-10">
-        <Button><FaGoogle className="text-xl"/></Button>
-        <Button><FaFacebook className="text-xl"/></Button>
+        <Button 
+        disabled={loading}
+          className='bg-btn-400 hover:bg-btn-600 duration-300 transition-colors'>
+            <FaGoogle className="text-xl"/>
+          </Button>
+        <Button 
+        disabled={loading}
+        className='bg-btn-400 hover:bg-btn-600 duration-300 transition-colors'>
+          <FaFacebook className="text-xl"/>
+          </Button>
       </div>
   </>
   );

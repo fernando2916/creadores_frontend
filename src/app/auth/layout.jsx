@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AuthPage({children}) {
   return (
     <>
-      <div className="flex flex-col justify-center items-center my-2 w-full">
+      <div className="flex flex-col justify-center items-center py-2 w-full">
         <div className="sm:mx-auto sm:w-full sm:max-w-md mt-10">
         <Link href="/">
             <Image 

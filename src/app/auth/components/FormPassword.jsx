@@ -9,6 +9,11 @@ import { useDispatch } from "react-redux";
 import { useAuthStore } from "@/hooks/useAuthStore";
 import { redirect, useParams } from "next/navigation";
 
+
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.css'
+import { Oval } from "react-loader-spinner";
+
 const newPasswordChange = {
   password: "",
   password2: "",
@@ -52,6 +57,18 @@ export const FormPassword = () => {
       .oneOf([Yup.ref("password"), null], "La contraseña no coincidie")
       .required("La confirmación de la contraseña es obligatoria"),
   });
+
+  useEffect(() => {
+       if (status === "Contraseña Actualizada") {
+        Swal.fire({
+          icon: "success",
+          title: message,
+          background: '#120024',
+          color: '#ffffff',
+    
+        })
+      }
+     }, [status])
 
   useEffect(() => {
     if (status === "Contraseña Actualizada") {
@@ -137,10 +154,9 @@ export const FormPassword = () => {
             {loading ? (
               <button
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-600 gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-600 gap-2 items-center"
               >
-                <p>Cargando...</p>
-                {/* <Oval
+                <Oval
                   visible={true}
                   height="30"
                   strokeWidth={4}
@@ -148,12 +164,13 @@ export const FormPassword = () => {
                   color="#fff"
                   secondaryColor="#6e004c"
                   ariaLabel="oval-loading"
-                /> */}
+                />
               </button>
             ) : (
               <button
+              disabled={loading}
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2 items-center"
               >
                 <FaCheck />
                 Confirmar contraseña

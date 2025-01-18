@@ -1,9 +1,8 @@
-// import { Button } from "@/components/ui/button"
 import {
-  Dialog,
+  DialogBody,
   DialogContent,
-  DialogDescription,
   DialogHeader,
+  DialogRoot,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -11,17 +10,17 @@ import {
 
 export const Politicas = () => {
   return (
-    <Dialog>
+    <DialogRoot>
       <DialogTrigger asChild>
         <button className="text-link-100 hover:text-link-300 transition-colors duration-150 mx-1">Aviso de privacidad</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] md:max-w-[500px] bg-nav-800">
         <DialogHeader>
           <DialogTitle> Aviso de Privacidad</DialogTitle>
-          <DialogDescription>
           Versión vigente: 24 de noviembre, 2023
-          </DialogDescription>
         </DialogHeader>
+        <DialogBody>
+
         <div className="overflow-y-scroll h-[30rem]">
               <p className="text-justify">
                 De conformidad con lo previsto en la Ley Federal de Datos
@@ -123,7 +122,9 @@ export const Politicas = () => {
                 </ul>
               </div>
             </div>
+        </DialogBody>
+
       </DialogContent>
-    </Dialog>
+    </DialogRoot>
   )
 }

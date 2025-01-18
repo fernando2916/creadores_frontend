@@ -1,19 +1,22 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { DialogBody,
+  DialogContent,
+  DialogHeader,
+  DialogRoot,
+  DialogTitle,
+  DialogTrigger, } from "@/components/ui/dialog"
 
 
 export const AgendarModal = () => {
   return (
-    <Dialog>
+    <DialogRoot>
       <DialogTrigger asChild>
-        <button className="text-link-100 hover:text-link-300 transition-colors duration-150 mx-1">Agendar Sesión</button>
+        <button className="bg-btn-400 hover:bg-btn-600 transition-colors duration-150 mx-1 px-3 py-2 rounded-lg">Agendar Sesión</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-nav-800">
         <DialogHeader>
           <DialogTitle> Aviso de Privacidad</DialogTitle>
-          <DialogDescription>
-          Versión vigente: 24 de noviembre, 2023
-          </DialogDescription>
         </DialogHeader>
+        <DialogBody>
         <div className="overflow-y-scroll h-[30rem]">
               <p className="text-justify">
                 De conformidad con lo previsto en la Ley Federal de Datos
@@ -115,7 +118,8 @@ export const AgendarModal = () => {
                 </ul>
               </div>
             </div>
+      </DialogBody>
       </DialogContent>
-    </Dialog>
+    </DialogRoot>
   )
 }

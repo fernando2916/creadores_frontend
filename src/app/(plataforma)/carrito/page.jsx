@@ -1,3 +1,5 @@
+import { Steps } from "./components/Steps";
+
 export const metadata = {
   title: 'Carrito'
 }
@@ -6,7 +8,9 @@ export const metadata = {
 export default function CarritoPage() {
   return (
     <div className="pt-[5rem]">
-      <h1>Carrito Page</h1>
+      <div className="max-w-7xl mx-10 mt-5">
+      <Steps/>
+      </div>
     </div>
   );
 }

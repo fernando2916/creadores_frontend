@@ -10,7 +10,7 @@ export const Recomended = () => {
       <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 ">
         <article className="relative flex flex-col rounded-lg overflow-hidden shadow-lg ">
             <Link href='/cursos/Programación-desde-cero-2023'>
-            <div className="relative aspect-video overflow-hidden">
+            <div className="relative aspect-video w-auto h-auto overflow-hidden">
               <Image src='/marketing.webp' alt="" className="" width={500} height={500} />
                 <span className='bg-categoria-100 py-1 rounded-md px-2 text-sm font-bold absolute top-3 left-3'>Desarrollo web</span>
                           <div className="absolute top-2 right-2 text-xl bg-btn-400 hover:bg-btn-600 transition-colors duration-150 p-3 rounded-full">

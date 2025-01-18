@@ -1,3 +1,5 @@
+import { Contenido } from "./components/Contenido";
+import { Header } from "./components/Header";
 
 export const metadata = {
   title: 'Cursos'
@@ -5,8 +7,11 @@ export const metadata = {
 
 export default function CursosPage() {
   return (
-    <div className="pt-[5rem]">
-      <h1>Cursos Page</h1>
-    </div>
+    <>
+      <Header/>
+      <main>
+        <Contenido/>
+      </main>
+    </>
   );
 }

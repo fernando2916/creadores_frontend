@@ -2,22 +2,29 @@
 
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaCalendar, FaClock, FaDollarSign } from "react-icons/fa";
 
-import { ItemsVacantes } from "./ItemsVacantes";
 import { FaLocationDot } from "react-icons/fa6";
 import { WorkInfo } from "./WorkInfo";
-import { WorkModal } from "./WorkModal";
+import { useJobsStore } from "@/hooks/useJobsStore";
+import { LoadCard } from "./skeleton";
 
 
 export const Vacantes = () => {
 
+  const {vacantes, viewJobs, isData, cargando} = useJobsStore();
+
+
     useEffect(() => {
-        window.scrollTo(0, 0);
+      viewJobs()
+      }, []);
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+      
       }, []);
     
-      const [isWork, setIsWork] = useState(true);
   return (
     <>
     <header className="pt-[4rem]">
@@ -33,44 +40,52 @@ export const Vacantes = () => {
       </div>
     </header>
     <main className="m-5">
-      {isWork ? (
+      {cargando ? (
+         <>
+         <p className="font-bold text-xl md:text-3xl container mx-auto">
+           Nuestras Vacantes Disponibles
+         </p>
+         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
+            <LoadCard/>
+         </ul>
+       </>
+      ) : isData ? (
         <>
           <p className="font-bold text-xl md:text-3xl container mx-auto">
             Nuestras Vacantes Disponibles
           </p>
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
-            {ItemsVacantes.map((item) => (
-              <li key={item.Puesto}>
-                <div className="bg-nav-800 rounded-2xl flex flex-col p-5 md:items-center">
-                  <div className="">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
+            {vacantes.map((item) => (
+              <li key={item.id}>
+                <div className="bg-nav-800 rounded-2xl flex flex-col">
+                  <div className="p-10">
                       <h3 className="text-2xl font-semibold text-btn-50">
-                        {item.Puesto}
+                        {item.puesto}
                       </h3>
                     <ul className=" mt-2 mb-5 space-y-2">
                       <li className=" font-medium flex items-center gap-1">
                         <FaLocationDot />
-                        {item.Opcion}
+                        {item.modalidad}
                       </li>
                       <li className=" font-medium flex items-center gap-1">
                         <FaClock />
-                        {item.Horario}
+                        {item.horario}
                       </li>
                       <li className=" font-meduim gap-1 flex items-center ">
                         <FaDollarSign />
-                        {item.Sueldo}
+                        {item.salario}
                       </li>
                       <li className="flex items-center gap-1">
                         <FaCalendar />
                         <p className="text-sm font-medium">
                           Último día para postularse:{" "}
                         </p>
-                        {item.Post}
+                        {item.postulacion}
                       </li>
                     </ul>
+                  <div className=" flex gap-5 justify-center sm:mx-10 md:mx-0 items-center">
+                    <WorkInfo vacante={item} />
                   </div>
-                  <div className=" flex gap-5 justify-center items-center">
-                    <WorkInfo />
-                    <WorkModal />
                   </div>
                 </div>
               </li>

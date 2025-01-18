@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { Button } from "../ui/button"
 import { FaShoppingCart } from "react-icons/fa"
+import { Button } from "../ui/button"
 
 export const MenuAccount = () => {
   return (
@@ -11,10 +11,10 @@ export const MenuAccount = () => {
         </Link>
       </button>
       <div className="flex items-center gap-2">
-        <Button variant="link" className="bg-transparent hidden lg:block">
+        <Button className="hidden lg:block text-link-100 hover:text-link-300 duration-300 transition-colors">
           <Link href="/auth/crear-cuenta">Registrarse</Link>
         </Button>
-        <Button className="hidden md:block">
+        <Button className="hidden md:block bg-btn-400 hover:bg-btn-600 duration-300 transition-colors px-3">
           <Link href="/auth/ingresar">Iniciar sesión</Link>
         </Button>
       </div>

@@ -1,8 +1,8 @@
 import {
-  Dialog,
+  DialogBody,
   DialogContent,
-  DialogDescription,
   DialogHeader,
+  DialogRoot,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
@@ -11,20 +11,20 @@ import { FaCircle } from "react-icons/fa";
 
 export const Terminos = () => {
   return (
-    <Dialog>
+    <DialogRoot>
       <DialogTrigger asChild>
         <button className="text-link-100 hover:text-link-300 transition-colors duration-150 mx-1">Términos y Condiciones</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] md:max-w-[500px] bg-nav-800">
         <DialogHeader>
-          <DialogTitle> Términos y condiciones</DialogTitle>
-          <DialogDescription>
-          Resumen de términos y condiciones
-          </DialogDescription>
+          <DialogTitle className='text-lg font-semibold'> Términos y condiciones</DialogTitle>
         </DialogHeader>
+        <DialogBody>
+
         <div className="overflow-y-scroll h-[30rem]">
           <span className="text-gray-400 font-light">
             Versión vigente: 24 de noviembre, 2023
+          <p> Resumen de términos y condiciones </p>
           </span>
           {/* resumen */}
           <div>
@@ -458,7 +458,9 @@ export const Terminos = () => {
             </div>
           </div>
         </div>
+        </DialogBody>
+
       </DialogContent>
-    </Dialog>
+    </DialogRoot>
   );
 };

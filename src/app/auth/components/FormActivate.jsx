@@ -6,9 +6,12 @@ import Link from "next/link";
 import { redirect, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.css'
+
 
 export const ActivacionDeCuenta = () => {
-  const { verify, message, errorMessage, status } = useAuthStore();
+  const { verify, message, errorMessage, status, loading } = useAuthStore();
   const [verification_code, setVerification_Code] = useState('')
   const params = useParams()
   const id = params.id
@@ -24,12 +27,37 @@ export const ActivacionDeCuenta = () => {
     });
  };
 
-  useEffect(() => {
-    if (status === "Activada") {
-      redirect('/auth/ingresar');
-   }
-  }, [status])
-  
+ useEffect(() => {
+   if (status === "Activada") {
+    Swal.fire({
+      icon: "success",
+      title: message,
+      background: '#120024',
+        color: '#ffffff',
+
+    })
+  }
+ }, [status])
+
+ useEffect(() => {
+   if (status === "activacion nula") {
+    Swal.fire({
+      icon: "error",
+      title: errorMessage,
+      background: '#120024',
+      color: '#ffffff',
+
+    })
+  }
+ }, [status])
+
+
+ useEffect(() => {
+   if (status === "Activada") {
+     redirect('/auth/ingresar');
+  }
+ }, [status])
+ 
   return (
     <div>
       <div>
@@ -51,7 +79,8 @@ export const ActivacionDeCuenta = () => {
       </div>
       <Link href='/auth/resetear-codigo'>
       <button
-        className="flex gap-2 font-semibold text-xl items-center mx-auto bg-btn-400 p-2 hover:bg-btn-600 transition-colors rounded-md mt-10"
+        disabled={loading}
+        className="flex gap-2 font-semibold text-xl items-center mx-auto bg-btn-400 p-2 disabled:bg-btn-600 transition-colors rounded-md mt-10"
         type="submit"
         >
         Solicitar nuevo código

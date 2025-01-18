@@ -1,5 +1,5 @@
-import { InputTalla } from '@/components/shared/input-talla';
-import { ModalComent } from '@/components/shared/ModalComent';
+import { InputTalla } from '@/app/(plataforma)/tienda/components/InputTalla';
+import { ModalComent } from '@/app/(plataforma)/tienda/components/ModalComent';
 import { Progress } from '@/components/ui/progress';
 import Image from 'next/image';
 import { FaCircle, FaClock, FaCreditCard, FaHeart, FaRegStar, FaShoppingCart, FaStar, FaUserCircle } from 'react-icons/fa';
@@ -10,6 +10,7 @@ export const metadata = {
 }
 
 export default function ProductPage() {
+
   return (
     <>
     {/* Header */}
@@ -17,7 +18,7 @@ export default function ProductPage() {
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-12 p-5 max-w-7xl mx-2 md:mx-auto">
           <div className="col-span-6 p-5 relative">
-            <Image src='/MEXICO.jpg' alt="imgane_title" className='' width={700} height={50} />
+            <Image src='/MEXICO.jpg' alt="image_title" className='' width={700} height={50} priority={'false'} />
             <span className="absolute top-6 left-9 bg-categoria-100 rounded-lg p-2 font-semibold text-sm">
               Nuevo
             </span>
@@ -27,11 +28,11 @@ export default function ProductPage() {
           </div>
           <div className="col-span-6 py-5 space-y-3">
             <div className='flex justify-between items-center mr-5'>
-            <h2 className="text-4xl font-semibold">IM MEXICO</h2>
+            <h2 className="text-4xl font-semibold">Soy de México</h2>
             </div>
             <div className="grid grid-cols-12">
               <p className="col-span-4 text-sm md:text-lg font-medium">
-                $1,600.00 MXN
+                $480.00 MXN
               </p>
               <div className=" col-span-8 flex items-center justify-end gap-3 ">
                 <div className="flex text-yellow-400">
@@ -290,7 +291,7 @@ export default function ProductPage() {
                 Comparte tus pensamientos
               </p>
               <p>
-                Si ha utilizado este producto, comparta sus opiniones con otros
+                Si has adquirido este producto, comparte tus opiniones con otros
                 clientes.
               </p>
             </div>

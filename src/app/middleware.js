@@ -2,7 +2,7 @@ import {NextResponse} from 'next/server'
 
 export function middleware(req) {
     // Obtener el token de la cabecera de la solicitud o de una cookie
-  const token = req.cookies.get('token') || req.headers.get('Authorization');
+  const token = req.localStorage.get('token') || req.headers.get('Authorization');
 
   // Ruta a proteger
 //   const protectedRoutes = ['/dashboard', '/admin', '/api/private-route'];

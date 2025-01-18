@@ -4,22 +4,22 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.css'
+import { Oval } from "react-loader-spinner";
 
 import {
-  FaFacebook,
-  FaGoogle,
   FaLock,
   FaLockOpen,
   FaSignInAlt,
 } from "react-icons/fa";
 
-import { Terminos } from "@/components/modales/terminos-modal";
-import { Politicas } from "@/components/modales/politicas-modal";
-import { Button } from "@/components/ui/button";
 import { useDispatch } from "react-redux";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { useAuthStore } from "@/hooks/useAuthStore";
+import { Terminos } from "@/components/modales/terminos-modal";
+import { Politicas } from "@/components/modales/politicas-modal";
 
 const registerFormFields = {
   name:       "",
@@ -77,10 +77,34 @@ export const Registro = () => {
   });
 
   useEffect(() => {
-    if (status === "Registrado") {
+    if (status === "Registrado") {     
+      Swal.fire({
+        icon: "success",
+        title: message,
+        background: '#120024',
+        color: '#ffffff',
+      })
+   }
+  }, [status])
+
+  useEffect(() => {
+    if (status === "Fallo el registro") {     
+      Swal.fire({
+        icon: "error",
+        title: errorMessage,
+        background: '#120024',
+        color: '#ffffff',
+        text: "Si eres tú, presiona el boton ingresar para iniciar sesión correctamente, de lo contrario se bloqueara la cuenta a la que intentas ingresar."
+      })
+   }
+  }, [status])
+
+  useEffect(() => {
+    if (status === "Registrado") {     
       redirect('/auth/activacion-en-espera');
    }
   }, [status])
+
 
   return (
     <>
@@ -237,14 +261,6 @@ export const Registro = () => {
               </div>
           </div>
            <div className="justify-start flex flex-col items-start">
-            {/* <div className="flex items-center gap-2 justify-center">
-                <input type="checkbox" name="" id="" className="w-4 h-4 accent-btn-200" />
-              <Terminos />
-            </div>
-            <div className="flex items-center gap-2 justify-center">
-                <input type="checkbox" name="" id=""className="w-4 h-4 accent-btn-200"/>
-              <Politicas />
-            </div>  */}
             <p className="text-[15px] py-1 w-full text-start">
               Al hacer click en Crear cuenta, indicas que leíste y aceptas los
               <Terminos />
@@ -264,8 +280,7 @@ export const Registro = () => {
                   disabled
                   className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-600 gap-2"
                 >
-                  <p>Cargando...</p> 
-                  {/* <Oval
+                  <Oval
                     visible={true}
                     height="30"
                     strokeWidth={4}
@@ -273,11 +288,11 @@ export const Registro = () => {
                     color="#fff"
                     secondaryColor="#6e004c"
                     ariaLabel="oval-loading"
-                  /> */}
+                  />
                 </button>
               ) : (
                 <button
-                // onClick={handleReset}
+                  disabled={loading}
                   type="submit"
                   className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2"
                 >
@@ -289,27 +304,19 @@ export const Registro = () => {
           <div>
             <p className="text-center ">
               ¿Ya tienes una cuenta?
-              <button className="text-link-100 font-bold ml-2">
-                <Link href="/auth/ingresar">Ingresar</Link>
+              <Link href="/auth/ingresar">
+              <button 
+              disabled={loading} 
+              className="text-link-100 disabled:text-link-500 font-bold ml-2">
+                Ingresar
               </button>
+                </Link>
             </p>
           </div> 
       </form>
       )}      
       </Formik>
-      <div className="bg-btn-600 p-[1px] relative mt-10">
-        <span className="absolute justify-center translatex-1/2 flex items-center bg-nav-800 rounded-md px-6 -top-[11px] left-[17%] sm:left-[23%]">
-          O Crea tu cuenta con
-        </span>
-      </div>
-      <div className="grid grid-cols-2 gap-5 mt-10">
-        <Button>
-          <FaGoogle className="text-xl" />
-        </Button>
-        <Button>
-          <FaFacebook className="text-xl" />
-        </Button>
-      </div>
+      
     </>
   );
 }

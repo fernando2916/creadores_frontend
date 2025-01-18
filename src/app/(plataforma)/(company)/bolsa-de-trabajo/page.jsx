@@ -5,9 +5,10 @@ export const metadata = {
 }
 
 export default function VacantesPage() {
+ 
   return (
     <div >
-      <Vacantes/>
+      <Vacantes/>      
     </div>
   );
 }

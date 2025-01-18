@@ -53,6 +53,7 @@ export const useAuthStore = () => {
   };
 
   const verify = async ({ id, verification_code }) => {
+    dispatch(onChecking());
     try {
       const { data } = await creadoresApi.post(`/auth/verify/${id}`, {
         verification_code,
@@ -60,6 +61,9 @@ export const useAuthStore = () => {
       dispatch(onActivate(data));
     } catch (error) {
       dispatch(onActivateFail(error.response.data));
+      setTimeout(() => {
+        dispatch(clearErrorMessage());
+      }, 5000);
     }
   };
 
@@ -122,6 +126,9 @@ export const useAuthStore = () => {
       dispatch(newPassword(data));
     } catch (error) {
       dispatch(newPasswordFail(error.response.data));
+      setTimeout(() => {
+        dispatch(clearErrorMessage());
+      }, 5000);
     }
   };
 
