@@ -5,10 +5,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { MenuPrincial } from "./menu-principal"
-import { MenuMobile } from "./menu-mobile"
 import { MenuIcons } from "./menu-icons"
 import { MenuAccount } from "./menu-account"
 import { useAuthStore } from "@/hooks/useAuthStore"
+import { SidebarMovile } from "./SidebarMovile"
 
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,7 +17,11 @@ export const Header = () => {
     setShowMenu(!showMenu);
   };
 
-  const {status, loading} = useAuthStore()
+  const {status, loading} = useAuthStore();
+
+
+
+  const isAuthenticated = status === 'Authenticated';
 
   return (
     <header className="flex justify-between w-full items-center p-4 bg-nav-900 fixed w-ful z-50">
@@ -34,13 +38,13 @@ export const Header = () => {
             </Link>
         </div>
         <div className="md:hidden -order-1 md:order-none">
-            <MenuMobile onClick={toggleMenu} showMenu={showMenu} auth={status}/>
+            <SidebarMovile onClick={toggleMenu} showMenu={showMenu}/>
         </div>
         <div className="hidden md:flex">
             <MenuPrincial/>
         </div>
         <div>
-        {status === 'Authenticated' ? (
+        {isAuthenticated  ? (
             <MenuIcons />
           ) : (
             <MenuAccount />

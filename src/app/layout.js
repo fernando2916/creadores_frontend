@@ -1,6 +1,7 @@
 import { Providers } from "@/store/provider";
 import "./globals.css";
 import RootProvider from "./provider";
+import { UseAuthInitializer } from "@/lib/session";
 
 export const metadata = {
   title: {
@@ -13,11 +14,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="es">
       <body className="bg-fondo-100 text-white selection:text-white selection:bg-selec-100">
         <RootProvider>
-          <Providers>{children}</Providers>
+            <Providers>
+              <UseAuthInitializer/>
+              {children}
+            </Providers>
         </RootProvider>
       </body>
     </html>

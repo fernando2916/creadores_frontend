@@ -1,5 +1,6 @@
 import creadoresApi from "@/api/creadoresApi";
 import { useDispatch, useSelector } from "react-redux";
+import Cookies from "js-cookie";
 
 import {
   onRegister,
@@ -18,7 +19,7 @@ import {
   onRegisterFail,
   onLoginFail,
 } from "@/store"; 
-
+import { createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
 
 
 export const useAuthStore = () => {
@@ -92,11 +93,19 @@ export const useAuthStore = () => {
         email,
         password,
       });
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("token-init-date", new Date().getTime());
+
+      const {token} = data;
+      Cookies.set('accessToken', token, {
+        expires: 15,
+        path: '/',
+        // secure: true,
+        sameSite: 'Strict',
+      }) 
       dispatch(onLogin(data));
+
     } catch (error) {
-      dispatch(onLoginFail(error.response.data || "--"));
+      
+      dispatch(onLoginFail(error.response?.data || "--"));
     }
   };
 
@@ -108,7 +117,9 @@ export const useAuthStore = () => {
         email,
       });
       dispatch(onResetPassword(data));
+
     } catch (error) {
+      
       dispatch(onResetPasswordFail(error.response.data));
       setTimeout(() => {
         dispatch(clearErrorMessage());
@@ -132,38 +143,76 @@ export const useAuthStore = () => {
     }
   };
 
-  const me = async () => {
-    try {
-      const resp = await creadoresApi.post("/auth/me");
-      console.log(resp);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const me = async () => {
+  //   try {
+  //     const resp = await creadoresApi.post("/auth/me");
+  //     console.log(resp);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  const refresh_token = async () => {
-    dispatch(onChecking());
-    const token = localStorage.getItem("token");
-    if (!token) return dispatch(onLogout());
+  // const refresh_token = async () => {
 
-    try {
-      const { data } = await creadoresApi.get("/auth/refresh");
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("token-init-date", new Date().getTime());
-      dispatch(onLogin(data));
-    } catch (error) {
-      localStorage.clear();
-      dispatch(onLogout(error.response.data));
-    }
-  };
+  //   dispatch(onChecking());
+
+  //   const token = Cookies.get("accessToken");
+  //   if (!token) return dispatch(onLogout());
+
+  //   try {
+  //     const { data } = await creadoresApi.get("/auth/refresh");
+
+  //     Cookies.set('accessToken', data.token,  {
+  //     expires: 1,
+  //       // secure:  true,
+  //       sameSite: 'Strict',
+  //     })
+
+  //     dispatch(onLogin(data));
+  //   } catch (error) {
+     
+  //     Cookies.remove('accessToken');
+  //     dispatch(onLogout(error.response.data));
+  //   }
+  // };
+
+  const refresh_token = createAsyncThunk(
+    'auth/refreshToken',
+    async (_, {dispatch, isRejectedWithValue}) => {
+      dispatch(onChecking());
+
+      const token = Cookies.get("accessToken");
+      if (!token) {
+        dispatch(onLogout());
+        return isRejectedWithValue("No token found");
+      }
+
+      try {
+        const { data } = await creadoresApi.get('/auth/refresh');
+        
+        Cookies.set("accessToken", data.token, {
+          expires: 15,
+          sameSite: "Strict",
+        })
+
+        dispatch(onLogin(data))
+      } catch (error) {
+        Cookies.remove("accessToken");
+        dispatch(onLogout(error.response.data || "Error refreshing token"));
+        return isRejectedWithValue(error.response.data || "Error refreshing token");
+      }
+    });
 
   const startLogout = async () => {
-    localStorage.clear();
+   
+    Cookies.revome('accessToken');
     dispatch(onLogout(null));
     setTimeout(() => {
       dispatch(clearErrorMessage());
     }, 1000);
   };
+
+
 
   return {
     //* Propiedades
@@ -174,7 +223,7 @@ export const useAuthStore = () => {
     onLogout,
     onChecking,
     loading,
-
+    
     //* Métodoa
     startLogin,
     startRegister,
@@ -182,8 +231,9 @@ export const useAuthStore = () => {
     reset_code,
     reset_password,
     new_password,
-    me,
+    // me,
     refresh_token,
     startLogout,
+    
   };
 };

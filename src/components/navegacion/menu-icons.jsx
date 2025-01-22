@@ -1,4 +1,3 @@
-import React from 'react'
 
 import {
   FaBell,
@@ -22,10 +21,11 @@ import {
 import { Button } from "../ui/button";
 import { useAuthStore } from '@/hooks/useAuthStore';
 
+
+
 export const MenuIcons = () => {
 
   const {user, startLogout} = useAuthStore()
-
 
   return (
     <div>
@@ -106,7 +106,8 @@ export const MenuIcons = () => {
                       <FaUserCircle className="text-3xl"/>
                       </div>
                       <div className="">
-                      <p className="text-sm">{user.name} {user.last_name}</p>
+                      <p className="text-sm">
+                        {user.name } </p>
                       <span className="text-link-100 text-xs">{user.email}</span>
                       </div>
                       </li>
@@ -135,7 +136,9 @@ export const MenuIcons = () => {
                       Soporte
                       </li>
                     <li className="hover:bg-nav-700 p-2 gap-2">
-                      <button className="flex items-center gap-2" onClick={startLogout}>
+                      <button className="flex items-center gap-2" 
+                      onClick={startLogout}
+                      >
 
                       <FaSignInAlt/>
                       Salir

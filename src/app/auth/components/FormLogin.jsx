@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import {FaLockOpen, FaLock, FaUser, FaGoogle, FaFacebook} from 'react-icons/fa';
-import { Button } from "@/components/ui/button";
+import {FaLockOpen, FaLock, FaUser} from 'react-icons/fa';
 import { useAuthStore } from "@/hooks/useAuthStore";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -26,7 +25,9 @@ export const Ingresar =() => {
 
   const { startLogin, errorMessage, message, status, loading } =
   useAuthStore();
-  const dispatch = useDispatch()
+
+
+  const dispatch = useDispatch();
 
   const loginSubmit = (values) => {
     dispatch(startLogin({
@@ -53,12 +54,14 @@ export const Ingresar =() => {
         })
       }
   }, [status])
+
   
   useEffect(() => {
     if (status === "Authenticated") {
        redirect('/');
     }
   }, [status])
+
   
   return (
     <>
@@ -72,6 +75,7 @@ export const Ingresar =() => {
         initialValues={loginFormFields}
         onSubmit={loginSubmit}
         validationSchema={loginSchema}
+
       >
         {({
           values,
@@ -79,6 +83,7 @@ export const Ingresar =() => {
           handleChange,
           handleSubmit,
         }) => (
+
           <form className="pt-3 space-y-5" noValidate onSubmit={handleSubmit}>
             <div className="flex flex-col space-y-2">
               <label className="font-medium text-sm after:content-['*'] after:ml-0.5 after:text-red-500">
@@ -147,6 +152,7 @@ export const Ingresar =() => {
               {loading ? (
                 <button
                   type="submit"
+                  disabled={status}
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-600 gap-2 items-center"
                 >
                   <Oval
@@ -182,23 +188,10 @@ export const Ingresar =() => {
             </div>
           
           </form>
+
         )}
       </Formik>
-      <div className="bg-btn-600 p-[1px] relative mt-5">
-        <span className="absolute justify-center font-semibold translatex-1/2 flex items-center bg-nav-800 rounded-md px-6 -top-[11px] left-[25%] sm:left-[25%]">O continuar con</span>
-      </div>
-      <div className="grid grid-cols-2 gap-5 mt-10">
-        <Button 
-        disabled={loading}
-          className='bg-btn-400 hover:bg-btn-600 duration-300 transition-colors'>
-            <FaGoogle className="text-xl"/>
-          </Button>
-        <Button 
-        disabled={loading}
-        className='bg-btn-400 hover:bg-btn-600 duration-300 transition-colors'>
-          <FaFacebook className="text-xl"/>
-          </Button>
-      </div>
+
   </>
   );
 }

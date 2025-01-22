@@ -8,7 +8,7 @@ export const authSlice = createSlice({
     token: {},
     message: null,
     errorMessage: null,
-    loading: false
+    loading: false,
   },
   reducers: {
 
@@ -86,7 +86,6 @@ export const authSlice = createSlice({
 
     },
 
-
     onLogin: ( state, { payload }) => {
       state.status = 'Authenticated',
       state.user = payload.user,
@@ -94,9 +93,8 @@ export const authSlice = createSlice({
       state.message = payload.message
       state.errorMessage = null
       state.loading = false
-
-      
     },
+
     onLoginFail: ( state, { payload }) => {
       state.status = 'Credenciales Incorrectas',
       state.user = {},
@@ -104,8 +102,6 @@ export const authSlice = createSlice({
       state.message = null
       state.errorMessage = payload.message
       state.loading = false
-
-      
     },
 
     onLogout: ( state) => {
@@ -114,9 +110,16 @@ export const authSlice = createSlice({
       state.token = {};
       state.errorMessage = null;
       state.message = null;
-      state.loading = false
+      state.loading = false      
+    },
 
-      
+    onLogoutFail: ( state, {payload}) => {
+      state.status = 'not-Authenticated';
+      state.user = {};
+      state.token = {};
+      state.errorMessage = payload.errorMessage;
+      state.message = null;
+      state.loading = false 
     },
 
     clearErrorMessage: (state) => {
@@ -132,9 +135,10 @@ export const {
   onChecking, 
   onLogin,
   onLoginFail, 
-  onLogout, 
+  onLogoutFail, 
   clearErrorMessage, 
   onRegister,
+  onLogout,
   onRegisterFail, 
   onActivate, 
   onActivateFail, 
