@@ -5,8 +5,7 @@ import { FaDollarSign, FaEye, FaHeart, FaRegStar, FaShoppingCart, FaStar } from 
 
 export const InfoTienda = () => {
   return (
-    <section>
-    <div className="max-w-7xl mx-5 lg:mx-auto py-10">
+    <section className="max-w-7xl mx-5 lg:mx-auto m-10">
       <h2 className="text-2xl md:text-4xl font-bold text-center">
         {" "}
         Más vendidos
@@ -99,7 +98,6 @@ export const InfoTienda = () => {
         </button>
         </Link>
       </div>
-    </div>
   </section>
   )
 }
