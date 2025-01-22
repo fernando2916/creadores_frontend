@@ -205,7 +205,7 @@ export const useAuthStore = () => {
 
   const startLogout = async () => {
    
-    Cookies.revome('accessToken');
+    Cookies.remove('accessToken');
     dispatch(onLogout(null));
     setTimeout(() => {
       dispatch(clearErrorMessage());
