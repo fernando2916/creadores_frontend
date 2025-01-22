@@ -267,7 +267,7 @@ export const Registro = () => {
           </div>
            <div className="justify-start flex flex-col items-start">
             <p className="text-[15px] py-1 w-full text-start">
-              Al hacer click en Crear cuenta, indicas que leíste y aceptas los
+              Al crear tú cuenta, indicas que leíste y aceptas los
               <Terminos />
               <span >
               y el
