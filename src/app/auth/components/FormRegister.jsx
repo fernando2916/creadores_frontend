@@ -112,7 +112,7 @@ export const Registro = () => {
         <h2 className="text-center mb-5 text-3xl font-bold">Crea una cuenta</h2>
       </div>
       <Formik initialValues={registerFormFields} onSubmit={registerSubmit} validationSchema={registerSchema}>
-      {({ values, errors, handleChange, handleSubmit, handleReset}) => (
+      {({ values, errors, handleChange, handleSubmit}) => (
         <form className="pt-3 space-y-3" noValidate onSubmit={handleSubmit}>
           <div className=" flex flex-col space-y-2">
               <label
@@ -124,12 +124,13 @@ export const Registro = () => {
 
               <input
                 id="nombre"
+                disabled={loading}
                 type="text"
                 placeholder="Ingresa tu Nombre "
                 className={
                   errors.name
                     ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
                 }
                 name="name"
                 value={values.name}
@@ -150,12 +151,13 @@ export const Registro = () => {
               </label>
               <input
                 id="apellido"
+                disabled={loading}
                 type="text"
                 placeholder="Ingresa tu apellido "
                 className={
                   errors.lastName
                     ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
                 }
                 name="lastName"
                 value={values.lastName}
@@ -174,13 +176,14 @@ export const Registro = () => {
                 Correo Electrónico
               </label>
               <input
+              disabled={loading}
                 id="correo"
                 type="email"
                 placeholder="Ingresa tu Correo Electrónico"
                 className={
                   errorMessage || errors.email
                     ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
                 }
                 name="email"
                 value={values.email}
@@ -201,13 +204,14 @@ export const Registro = () => {
               </label>
               <div className="relative">
                 <input
+                disabled={loading}
                   id="contraseña"
                   type={showPassword ? "text" : "password"}
                   placeholder="Ingresa una contraseña"
                   className={
                     errors.password
                       ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                      : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
                   }
                   name="password"
                   value={values.password}
@@ -235,13 +239,14 @@ export const Registro = () => {
               </label>
               <div className="relative">
                 <input
+                disabled={loading}
                   id="confirmar contraseña"
                   type={showPassword2 ? "text" : "password"}
                   placeholder="Repite la contraseña"
                   className={
                     errors.password2
                       ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                      : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
                   }
                   name="password2"
                   value={values.password2}
@@ -277,7 +282,7 @@ export const Registro = () => {
            {loading ? (
                 <button
                   type="submit"
-                  disabled
+                  disabled={loading}
                   className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-600 gap-2"
                 >
                   <Oval
@@ -294,7 +299,7 @@ export const Registro = () => {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2"
+                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-400 disabled:bg-btn-600 hover:bg-btn-600 transition-all ease-in gap-2"
                 >
                   <FaSignInAlt />
                   Crear Cuenta

@@ -90,12 +90,13 @@ export const Ingresar =() => {
                 Correo Electrónico
               </label>
               <input
+                disabled={loading}
                 type="email"
                 placeholder="Ingresa tu Correo Electrónico"
                 className={
                   errors.email || errorMessage
                     ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
                 }
                 name="email"
                 value={values.email}
@@ -111,12 +112,13 @@ export const Ingresar =() => {
               <label className="font-medium text-sm after:content-['*'] after:ml-0.5 after:text-red-500">Contraseña</label>
               <div className="relative">
                 <input
+                  disabled={loading}
                   type={showPassword ? "text" : "password"}
                   placeholder="Ingresa una contraseña"
                   className={
                     errors.password
                       ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                      : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
                   }
                   name="password"
                   value={values.password}
@@ -169,7 +171,7 @@ export const Ingresar =() => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2 items-center"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center"
                 >
                   <FaUser />
                   Entrar a mi cuenta

@@ -21,7 +21,7 @@ export function middleware(req) {
   // Verifica si la ruta actual está protegida
     if (!token && protectedRoutes.includes(url.pathname)) {
       // Si no hay token, redirige al login
-      url.pathname = '/ingresar'
+      url.pathname = '/auth/ingresar'
       return NextResponse.redirect(url);
       // const loginUrl = new URL('/ingresar', req.url)
     }  

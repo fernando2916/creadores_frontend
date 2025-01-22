@@ -96,12 +96,13 @@ export const FormPassword = () => {
                 </label>
                 <div className="relative">
                   <input
+                  disabled={loading}
                     type={showPassword ? "text" : "password"}
                     placeholder="Ingresa una contraseña"
                     className={
                       errors.password
                         ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                        : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                        : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
                     }
                     name="password"
                     value={values.password}
@@ -126,12 +127,13 @@ export const FormPassword = () => {
                 </label>
                 <div className="relative">
                   <input
+                  disabled={loading}
                     type={showPassword2 ? "text" : "password"}
                     placeholder="Repite la contraseña"
                     className={
                       errors.password2
                         ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                        : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                        : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
                     }
                     name="password2"
                     value={values.password2}
@@ -153,6 +155,7 @@ export const FormPassword = () => {
             </div>
             {loading ? (
               <button
+              disabled={loading}
                 type="submit"
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-600 gap-2 items-center"
               >
@@ -170,7 +173,7 @@ export const FormPassword = () => {
               <button
               disabled={loading}
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-400 hover:bg-btn-600 transition-all ease-in gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center"
               >
                 <FaCheck />
                 Confirmar contraseña

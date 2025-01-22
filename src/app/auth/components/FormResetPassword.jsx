@@ -82,11 +82,12 @@ export const RecuperarContraseña = () => {
               </label>
               <input
                 type="email"
+                disabled={loading}
                 placeholder="Ingresa tu Correo Electrónico"
                 className={
                   errors.email || errorMessage?.message
                     ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
                 }
                 name="email"
                 value={values.email}
@@ -101,6 +102,7 @@ export const RecuperarContraseña = () => {
             {loading ? (
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-600 gap-2 items-center"
               >
                 <Oval
@@ -117,7 +119,7 @@ export const RecuperarContraseña = () => {
               <button
               disabled={loading}
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-400 hover:bg-btn-600 gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 gap-2 items-center"
               >
                 <FaEnvelope />
                 Restablecer contraseña

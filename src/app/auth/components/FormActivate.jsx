@@ -67,12 +67,12 @@ export const ActivacionDeCuenta = () => {
         <form>
           <div className="flex justify-center items-center gap-5">
             <PinInput size='lg' name='verification_code' value={verification_code} onChange={handleChange} onComplete={handleComplete}>
-              <PinInputField className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2  outline-none placeholder:text-[#120024]"/>
-              <PinInputField className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
-              <PinInputField className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
-              <PinInputField className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
-              <PinInputField className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
-              <PinInputField className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
+              <PinInputField _disabled={loading} className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2  outline-none placeholder:text-[#120024]"/>
+              <PinInputField disabled={loading} className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
+              <PinInputField disabled={loading} className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
+              <PinInputField disabled={loading} className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
+              <PinInputField disabled={loading} className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
+              <PinInputField disabled={loading} className="w-10 h-10 rounded-md border border-link-200 items-center bg-transparent p-[14px] pt-[12px] text-lg focus:border-link-100 focus:border-2 outline-none placeholder:text-[#120024]"/>
             </PinInput>
           </div>
         </form>
@@ -80,7 +80,7 @@ export const ActivacionDeCuenta = () => {
       <Link href='/auth/resetear-codigo'>
       <button
         disabled={loading}
-        className="flex gap-2 font-semibold text-xl items-center mx-auto bg-btn-400 p-2 disabled:bg-btn-600 transition-colors rounded-md mt-10"
+        className="flex gap-2 font-semibold text-xl items-center mx-auto bg-btn-400 hover:bg-btn-600 p-2 disabled:bg-btn-600 transition-colors rounded-md mt-10"
         type="submit"
         >
         Solicitar nuevo código

@@ -18,7 +18,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "../ui/hover-card";
-import { Button } from "../ui/button";
 import { useAuthStore } from '@/hooks/useAuthStore';
 
 
@@ -37,37 +36,40 @@ export const MenuIcons = () => {
           <HoverCard>
             <HoverCardTrigger className="hidden sm:flex">
               <FaHeart className="text-2xl hover:text-link-100" />
-              <HoverCardContent className=" h-96">
+              <HoverCardContent className=" h-auto">
                 {/* CONTENIDO */}
-                <div className=" overflow-y-scroll border-b border-slate-700 mb-3 h-[18rem]">
-                  <div className="py-2">
+                <div className=" overflow-y-scroll border-b border-slate-700 mb-3 h-auto">
+                  <div className="py-2 justify-center text-center">
+                    <p className="text-center justify-center mx-auto">No hay deseos aún.</p>
+                  </div>
+                  {/* <div className="py-2">
                     <p className="mb-1">No hay deseos aún.</p>
-                    <Button className="w-full">Añadir al carrito</Button>
+                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
                   </div>
                   <div className="py-2">
                     <p className="mb-1">No hay deseos aún.</p>
-                    <Button className="w-full">Añadir al carrito</Button>
+                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
                   </div>
                   <div className="py-2">
                     <p className="mb-1">No hay deseos aún.</p>
-                    <Button className="w-full">Añadir al carrito</Button>
+                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
                   </div>
                   <div className="py-2">
                     <p className="mb-1">No hay deseos aún.</p>
-                    <Button className="w-full">Añadir al carrito</Button>
+                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
                   </div>
                   <div className="py-2">
                     <p className="mb-1">No hay deseos aún.</p>
-                    <Button className="w-full">Añadir al carrito</Button>
+                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
                   </div>
                   <div className="py-2">
                     <p className="mb-1">No hay deseos aún.</p>
-                    <Button className="w-full">Añadir al carrito</Button>
-                  </div>
+                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
+                  </div> */}
                 </div>
   
                 {/* FOOTER */}
-                <Button className="w-full ">Ir a la lista de deseos</Button>
+                <button className="w-full flex justify-center py-2 rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Ir a la lista de deseos</button>
               </HoverCardContent>
             </HoverCardTrigger>
           </HoverCard>
@@ -80,7 +82,7 @@ export const MenuIcons = () => {
                 {/* CONTENIDO */}
                 <div className="flex flex-col space-y-2 items-center justify-center">
                   <p className="justify-center text-gray-400">Tu carrito esta vacío</p>
-                  <Button className="w-full ">Seguir comprando</Button>
+                  <button className="w-full flex justify-center py-2 rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Seguir comprando</button>
                 </div>
                 {/* <div className=" overflow-y-scroll mb-3 h-auto">
                   <div className="py-2">
