@@ -59,7 +59,7 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
             ) : (
               <>
                 <div className="p-5 ">
-                  <div className="flex items-center gap-3 justify-center mx-5 pb-3">
+                  <div className="flex items-center gap-3 justify-center pb-3">
                     <div className="rounded-full">
                       <FaUser className="text-3xl" />
                     </div>

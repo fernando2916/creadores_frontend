@@ -19,6 +19,7 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 import { useAuthStore } from '@/hooks/useAuthStore';
+import Link from "next/link";
 
 
 
@@ -33,46 +34,11 @@ export const MenuIcons = () => {
             <FaSearch />
           </li>
           {/* DESEOS */}
-          <HoverCard>
-            <HoverCardTrigger className="hidden sm:flex">
+          <div>
+            <Link href='/mi-lista-de-deseos'>
               <FaHeart className="text-2xl hover:text-link-100" />
-              <HoverCardContent className=" h-auto">
-                {/* CONTENIDO */}
-                <div className=" overflow-y-scroll border-b border-slate-700 mb-3 h-auto">
-                  <div className="py-2 justify-center text-center">
-                    <p className="text-center justify-center mx-auto">No hay deseos aún.</p>
-                  </div>
-                  {/* <div className="py-2">
-                    <p className="mb-1">No hay deseos aún.</p>
-                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
-                  </div>
-                  <div className="py-2">
-                    <p className="mb-1">No hay deseos aún.</p>
-                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
-                  </div>
-                  <div className="py-2">
-                    <p className="mb-1">No hay deseos aún.</p>
-                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
-                  </div>
-                  <div className="py-2">
-                    <p className="mb-1">No hay deseos aún.</p>
-                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
-                  </div>
-                  <div className="py-2">
-                    <p className="mb-1">No hay deseos aún.</p>
-                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
-                  </div>
-                  <div className="py-2">
-                    <p className="mb-1">No hay deseos aún.</p>
-                    <button className="w-full flex justify-center py-2 px-4 rounded-md text-base font-medium text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Añadir al carrito</button>
-                  </div> */}
-                </div>
-  
-                {/* FOOTER */}
-                <button className="w-full flex justify-center py-2 rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Ir a la lista de deseos</button>
-              </HoverCardContent>
-            </HoverCardTrigger>
-          </HoverCard>
+            </Link>
+          </div>
           {/* CARRITO */}
 
           <HoverCard className="right-5">

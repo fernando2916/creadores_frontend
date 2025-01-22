@@ -4,7 +4,7 @@ import { FaEye, FaHeart, FaRegStar, FaShoppingCart, FaStar } from "react-icons/f
 
 export const Products = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-8 md:mx-auto p-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-8 md:mx-auto p-5">
       <Link href="/tienda/50">
         <article className="bg-nav-900 rounded-lg">
           <div className="relative">
