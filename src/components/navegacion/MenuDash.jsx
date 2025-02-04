@@ -27,6 +27,7 @@ import {
   FaSignOutAlt,
   FaVideo,
 } from "react-icons/fa";
+import { FaEarthAmericas } from "react-icons/fa6";
 
 export const MenuDash = ({ onClick: toggleMenu}) => {
 
@@ -249,7 +250,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           onClick={toggleMenu}
         >
           <Link
-            href="/sobre-nosotros"
+            href="/nosotros/sobre-nosotros"
             className="flex items-center gap-3 p-3 text-lg"
           >
             <FaInfoCircle />
@@ -297,11 +298,23 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           onClick={toggleMenu}
         >
           <Link
-            href="/responsabilidad-social"
+            href="/nosotros/responsabilidad-social"
             className="flex items-center gap-3 p-3 text-lg"
           >
             <FaNewspaper />
             Responsabilidad Social
+          </Link>
+        </li>
+        <li
+          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          onClick={toggleMenu}
+        >
+          <Link
+            href="/nosotros/politica-medioambiente"
+            className="flex items-center gap-3 p-3 text-lg"
+          >
+            <FaEarthAmericas />
+            Política de medio ambiente
           </Link>
         </li>
       </ul>

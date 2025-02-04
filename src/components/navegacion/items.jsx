@@ -6,6 +6,7 @@ import {
     FaTelegram,
     FaYoutube,
     FaPinterest,
+    FaEarthAmericas,
   } from "react-icons/fa6";
 
 import {
@@ -35,7 +36,7 @@ import {
     { name: "Preguntas Frecuentes", href: "/preguntas-frecuentes" },
   ];
   export const compania = [
-    { name: "Nosotros", href: "/sobre-nosotros" },
+    { name: "Quienes Somos", href: "/nosotros/quienes-somos" },
     { name: "Recursos", href: "/recursos" },
     { name: "Vacantes", href: "/bolsa-de-trabajo" },
   ];
@@ -113,8 +114,8 @@ import {
   
   export const company = [
     {
-      name: "Sobre Nosotros",
-      href: "/sobre-nosotros",
+      name: "Quienes somos",
+      href: "/nosotros/quienes-somos",
       icon: <FaInfoCircle />,
     },
     {
@@ -134,8 +135,13 @@ import {
     },
     {
       name: "Responsabilidad Social",
-      href: "/responsabilidad-social",
+      href: "/nosotros/responsabilidad-social",
       icon: <FaNewspaper />,
+    },
+    {
+      name: "Política ambiental",
+      href: "/nosotros/politica-medioambiente",
+      icon: <FaEarthAmericas />,
     },
   ];
 
@@ -206,9 +212,9 @@ export const SideMenu = [
     items: [
       {
         id:   '1',
-        name: 'Sobre Nosotros',
+        name: 'Quienes Somos',
         icon2: <FaInfoCircle/>,
-        href: '/sobre-nosotros',
+        href: '/nosotros/quienes-somos',
       },
       {
         id:   '2',
@@ -226,7 +232,13 @@ export const SideMenu = [
         id:   '4',
         name: 'Resposabilidad Social',
         icon2: <FaNewspaper/>,
-        href: '/resposabilidad-social',
+        href: '/nosotros/responsabilidad-social',
+      },
+      {
+        id:   '5',
+        name: 'Política de medio ambiente',
+        icon2: <FaEarthAmericas/>,
+        href: '/nosotros/politica-medioambiente',
       },
     ]
   },
