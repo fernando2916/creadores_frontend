@@ -1,10 +1,17 @@
-import Link from "next/link"
-import { FaShoppingCart } from "react-icons/fa"
-import { Button } from "../ui/button"
+import Link from "next/link";
+import { FaMoon, FaShoppingCart, FaSun } from "react-icons/fa";
+import { Button } from "../ui/button";
+import { useTheme } from "@/context/DarkModeProvider";
 
 export const MenuAccount = () => {
+  const { toggleTheme } = useTheme();
+
   return (
     <div className="flex items-center justify-center gap-0 sm:gap-2">
+      <button onClick={toggleTheme} className="relative flex items-center justify-center text-white transition-colors bg-btn-400 rounded-full h-11 w-11 hover:bg-btn-600  dark:bg-btn-400 dark:text-white dark:hover:bg-btn-600 dark:hover:text-white">
+        <FaSun className="hidden dark:block"/>  
+        <FaMoon className="dark:hidden"/>
+      </button>
       <button>
         <Link href="/carrito">
           <FaShoppingCart className="text-2xl hover:text-link-100" />
@@ -19,5 +26,5 @@ export const MenuAccount = () => {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};

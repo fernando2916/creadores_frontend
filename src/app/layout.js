@@ -2,7 +2,7 @@ import { Providers } from "@/store/provider";
 import "./globals.css";
 import RootProvider from "./provider";
 import { UseAuthInitializer } from "@/lib/session";
-
+import { DarkModeProvider } from "@/context/DarkModeProvider";
 export const metadata = {
   title: {
     template: "%s | Emprendedores Creativos",
@@ -17,13 +17,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="es">
-      <body className="bg-fondo-100 text-white selection:text-white selection:bg-selec-100">
+      <body className="dark:bg-fondo-100 dark:text-white selection:text-white selection:bg-selec-100">
+      <DarkModeProvider>
         <RootProvider>
             <Providers>
               <UseAuthInitializer/>
               {children}
             </Providers>
         </RootProvider>
+      </DarkModeProvider>
       </body>
     </html>
   );
