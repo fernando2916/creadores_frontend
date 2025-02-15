@@ -35,9 +35,12 @@ export const MenuIcons = () => {
           </li>
           {/* DESEOS */}
           <div>
+            <button className="flex items-center justify-center text-white transition-colors bg-btn-400 rounded-lg h-10 w-10 box-content hover:bg-btn-600  dark:bg-btn-400 dark:text-white dark:hover:bg-btn-600 dark:hover:text-white">
+
             <Link href='/mi-lista-de-deseos'>
-              <FaHeart className="text-2xl hover:text-link-100" />
+              <FaHeart  />
             </Link>
+            </button>
           </div>
           {/* CARRITO */}
 
@@ -69,7 +72,7 @@ export const MenuIcons = () => {
                 {/* CONTENIDO */}
                 <div className=" overflow-y-scroll mb-3 ">
                   <ul className="space-y-1">
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <div className="">
                       <FaUserCircle className="text-3xl"/>
                       </div>
@@ -79,31 +82,31 @@ export const MenuIcons = () => {
                       <span className="text-link-100 text-xs">{user.email}</span>
                       </div>
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <FaBell/>
                       Notificaciones
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <FaHeart/>
                       Lista de deseos
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <FaShoppingBasket/>
                       Mis compras
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <FaLaptopCode/>
                       Mis aprendizaje
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <FaFileAlt/>
                       Facturación
                       </li>
-                    <li className="hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
                       <FaUserCog/>
                       Soporte
                       </li>
-                    <li className="hover:bg-nav-700 p-2 gap-2">
+                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 gap-2">
                       <button className="flex items-center gap-2" 
                       onClick={startLogout}
                       >

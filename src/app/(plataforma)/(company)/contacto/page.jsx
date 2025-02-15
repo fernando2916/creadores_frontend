@@ -45,12 +45,12 @@ export default function ContactoPage() {
       <main>
         <div className="flex flex-col md:flex-row m-5  ">
           {/* INFORMACION */}
-          <div className="w-full md:w-1/2 items-center order-last md:-order-last justify-center mt-5 p-3 lg:p-10 mb-10 bg-nav-800 rounded-lg ">
+          <div className="w-full md:w-1/2 items-center order-last md:-order-last justify-center mt-5 p-3 lg:p-10 mb-10 bg-slate-300 dark:bg-nav-800 rounded-lg ">
             <div className="mx-auto max-w-2xl text-center block mt-5">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 Medios de Contacto
               </h2>
-              <p className="mt-2 text-lg leading-8 text-gray-100">
+              <p className="mt-2 text-lg leading-8 text-slate-600 dark:text-slate-300">
                 Aqui tienes distintas maneras de contactarnos
               </p>
             </div>
@@ -60,24 +60,24 @@ export default function ContactoPage() {
                   <FaClock />
                   <h3 className="">Horario de Atención:</h3>
                 </div>
-                <p className="text-link-100">
-                  Lunes a Viernes : 10:00 am a 6:00 pm
+                <p className="text-link-300 dark:text-link-100">
+                  L a V : 10:00 am a 6:00 pm
                 </p>
-                <p className="text-link-100">Sábados : 10:00 am a 1:00 pm</p>
+                <p className="text-link-300 dark:text-link-100">Sábados : 10:00 am a 1:00 pm</p>
               </div>
               <div className="flex flex-col lg:flex-row gap-2 items-center">
                 <div className="flex items-center gap-2">
                   <FaWhatsapp />
                   <h3 className="">Teléfono / WhatsApp:</h3>
                 </div>
-                <p className="text-link-100"> 55-27-97-08-10</p>
+                <p className="text-link-300 dark:text-link-100"> 55-27-97-08-10</p>
               </div>
               <div className="flex flex-col lg:flex-row gap-2 items-center">
                 <div className="flex item gap-2">
                   <FaLocationDot />
                   <h3 className="">Ubicación:</h3>
                 </div>
-                <p className="text-link-100 text-sm text-justify">
+                <p className="text-link-300 dark:text-link-100 text-sm text-justify">
                   C. Nícolas Bravo 107, Bo. San Miguel Ótlica, 54964, Tultepec
                   edo de Méx.
                 </p>
@@ -87,7 +87,7 @@ export default function ContactoPage() {
                   <FaEnvelopeOpen />
                   <h3 className="">Correo Electrónico:</h3>
                 </div>
-                <p className="text-link-100 ">
+                <p className="text-link-300 dark:text-link-100 ">
                   {" "}
                   emprendedorescreativos2019@gmail.com
                 </p>
@@ -104,7 +104,7 @@ export default function ContactoPage() {
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                     Redes Sociales
                   </h2>
-                  <p className="mt-2 text-lg text-gray-200">
+                  <p className="mt-2 text-lg text-slate-600 dark:text-slate-300">
                     Tambien nos puedes contactar por medio de nuestras redes
                     sociales.
                   </p>
@@ -114,7 +114,7 @@ export default function ContactoPage() {
                     href="https://www.facebook.com/CreadoresCreativos.MX"
                     target="_blank"
                   >
-                    <div className="bg-btn-400 hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
+                    <div className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
                       <FaFacebook className="text-3xl" />
                     </div>
                   </Link>
@@ -122,12 +122,12 @@ export default function ContactoPage() {
                     href="https://www.twitter.com/Creadores_Creat"
                     target="_blank"
                   >
-                    <div className="bg-btn-400 hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
+                    <div className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
                       <FaXTwitter className="text-3xl" />
                     </div>
                   </Link>
                   <Link href="https://t.me/+8q0-Zd0_u3kzYWU5" target="_blank">
-                    <div className="bg-btn-400 hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
+                    <div className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
                       <FaTelegram className="text-3xl" />
                     </div>
                   </Link>
@@ -135,7 +135,7 @@ export default function ContactoPage() {
                     href="https://www.instagram.com/creadores_creat"
                     target="_blank"
                   >
-                    <div className="bg-btn-400 hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
+                    <div className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
                       <FaInstagram className="text-3xl" />
                     </div>
                   </Link>

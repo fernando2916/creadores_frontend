@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const TiposFoto = () => {
   return (
-    <section className="max-w-7xl mx-5 lg:mx-auto my-10">
+    <section className="max-w-7xl p-5 lg:mx-auto my-10 bg-slate-300 dark:bg-cont-100">
       <h3 className="text-center text-4xl font-semibold">Tipos de foto</h3>
       <div className="grid grid-cols-12 mx-auto gap-5 pt-5">
         <div className="col-span-full md:col-span-6 flex items-center justify-center">

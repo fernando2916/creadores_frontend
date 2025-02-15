@@ -11,7 +11,7 @@ export const HeaderPriv = () => {
         <div className="flex items-center justify-end max-w-7xl mx-5 md:mx-auto mt-5 gap-2">
           <FaUserShield />
           <Link href='/privacidad/resumen'>
-            <h3 className="text-link-100">Ir a la Delcaración de privacidad</h3>
+            <h3 className="text-link-300 dark:text-link-100">Ir a la Delcaración de privacidad</h3>
           </Link>
           <FaAngleRight/>
           </div>

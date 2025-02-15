@@ -18,7 +18,7 @@ export const SlideTestimonial = () => {
           modules={[Autoplay, Navigation, Pagination]}
           autoplay={{ delay: 4500, disableOnInteraction: false }}>
           <SwiperSlide>
-            <div className="bg-nav-900 border-2 shadow-2xl shadow-link-500 border-link-500 rounded-lg xl:w-96 md:w-80 ">
+            <div className="border-2 shadow-2xl shadow-link-500 border-link-100 rounded-lg xl:w-96 md:w-80 ">
               <p className="flex justify-center items-center mx-auto p-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
                 facere deserunt quo blanditiis pariatur, nulla ratione similique
@@ -39,17 +39,17 @@ export const SlideTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-xs gap-2">
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
                   <FaStar />
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-nav-900 border-2 shadow-2xl shadow-link-500 border-link-500 rounded-lg xl:w-96 md:w-80 ">
+            <div className="border-2 shadow-2xl shadow-link-500 border-link-100 rounded-lg xl:w-96 md:w-80 ">
               <p className="flex justify-center items-center mx-auto p-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
                 facere deserunt quo blanditiis pariatur, nulla ratione similique
@@ -70,17 +70,17 @@ export const SlideTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-xs gap-2">
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
                   <FaStar />
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-nav-900 border-2 shadow-2xl shadow-link-500 border-link-500 rounded-lg xl:w-96 md:w-80 ">
+            <div className="border-2 shadow-2xl shadow-link-500 border-link-100 rounded-lg xl:w-96 md:w-80 ">
               <p className="flex justify-center items-center mx-auto p-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
                 facere deserunt quo blanditiis pariatur, nulla ratione similique
@@ -101,17 +101,17 @@ export const SlideTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-xs gap-2">
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
                   <FaStar />
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-nav-900 border-2 shadow-2xl shadow-link-500 border-link-500 rounded-lg xl:w-96 md:w-80 ">
+            <div className="border-2 shadow-2xl shadow-link-500 border-link-100 rounded-lg xl:w-96 md:w-80 ">
               <p className="flex justify-center items-center mx-auto p-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
                 facere deserunt quo blanditiis pariatur, nulla ratione similique
@@ -132,17 +132,17 @@ export const SlideTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-xs gap-2">
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
                   <FaStar />
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-nav-900 border-2 shadow-2xl shadow-link-500 border-link-500 rounded-lg xl:w-96 md:w-80 ">
+            <div className="border-2 shadow-2xl shadow-link-500 border-link-100 rounded-lg xl:w-96 md:w-80 ">
               <p className="flex justify-center items-center mx-auto p-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
                 facere deserunt quo blanditiis pariatur, nulla ratione similique
@@ -163,17 +163,17 @@ export const SlideTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-xs gap-2">
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
                   <FaStar />
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-nav-900 border-2 shadow-2xl shadow-link-500 border-link-500 rounded-lg xl:w-96 md:w-80 ">
+            <div className="border-2 shadow-2xl shadow-link-500 border-link-100 rounded-lg xl:w-96 md:w-80 ">
               <p className="flex justify-center items-center mx-auto p-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
                 facere deserunt quo blanditiis pariatur, nulla ratione similique
@@ -194,15 +194,16 @@ export const SlideTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-xs gap-2">
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
-                  <FaStar className="text-btn-500" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
+                  <FaStar className="text-btn-400 dark:text-btn-200" />
                   <FaStar />
                 </div>
               </div>
             </div>
           </SwiperSlide>
+          
         </Swiper>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { AgendarModal } from "./AgendarModal"
 export const BannerContact = () => {
   return (
     <>
-      <section className="bg-cont-100 max-w-7xl mx-5 lg:mx-auto my-10">
+      <section className="bg-slate-300 dark:bg-cont-100 max-w-7xl p-5 lg:mx-auto my-10">
         <h3 className="text-center text-4xl font-semibold pt-3">
           Agendar sesión
         </h3>

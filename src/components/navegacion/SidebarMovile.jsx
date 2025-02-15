@@ -17,29 +17,29 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
     <aside>
       <div>
         <button
-          className=" bg-btn-400 hover:bg-btn-600 transition-colors duration-150 p-3 rounded-md outline-none"
+          className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 p-3 rounded-md outline-none"
           onClick={toggleMenu}
         >
           <FaBars />
         </button>
       </div>
       <div
-        className={`w-full bg-nav-950/60 fixed inset-0 z-50 duration-150 ease-out justify-start items-end 
+        className={`w-full bg-gray-900/60 dark:bg-nav-950/60 fixed inset-0 z-50 duration-150 ease-out justify-start items-end 
             ${showMenu ? "left-0" : "-left-full"}`}
       >
         <button
-          className=" bg-btn-400 hover:bg-btn-600 transition-colors duration-150 p-3 rounded-md outline-none absolute top-5 right-5"
+          className=" bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 p-3 rounded-md outline-none absolute top-5 right-5"
           onClick={toggleMenu}
         >
           <FaTimes />
         </button>
 
         <div
-          className={`w-3/4 h-full bg-nav-900 fixed transition-all duration-150 justify-between overflow-y-scroll ease-out 
+          className={`w-3/4 h-full bg-slate-200 dark:bg-nav-900 fixed transition-all duration-150 justify-between overflow-y-scroll ease-out 
               ${showMenu ? "left-0" : "-left-full"}`}
         >
           <div className="flex justify-center h-36 p-5
-           items-center gap-3 py-3 bg-nav-800">
+           items-center gap-3 py-3 bg-white dark:bg-nav-800">
             {status == "Authenticated" ? (
               <>
                 <div className="">
@@ -67,14 +67,14 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
                       <span className="text-lg font-semibold ">
                         Entra a tu cuenta
                       </span>
-                      <p className="text-xs text-justify text-gray-300">
+                      <p className="text-xs text-justify text-slate-500">
                         Podrás comprar un artículo, comentar una publicación o
                         continuar con tu aprendizaje.
                       </p>
                     </div>
                   </div>
                   <Link href="/auth/ingresar" onClick={toggleMenu}>
-                    <button className="flex justify-center items-center mx-auto bg-btn-400 hover:bg-btn-600 text-white w-full p-2 rounded-lg">
+                    <button className="flex justify-center items-center mx-auto bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 w-full p-2 rounded-lg transition-colors duration-150">
                       Ingresar
                     </button>
                   </Link>

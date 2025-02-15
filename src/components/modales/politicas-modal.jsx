@@ -12,9 +12,9 @@ export const Politicas = () => {
   return (
     <DialogRoot>
       <DialogTrigger asChild>
-        <button className="text-link-100 hover:text-link-300 transition-colors duration-150 mx-1">Aviso de privacidad</button>
+        <button className="text-link-300 hover:text-link-400 dark:text-link-100 dark:hover:text-link-400 transition-colors duration-150 mx-1">Aviso de privacidad</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] md:max-w-[500px] bg-nav-800">
+      <DialogContent className="sm:max-w-[425px] md:max-w-[500px] bg-slate-400 dark:bg-nav-800">
         <DialogHeader>
           <DialogTitle> Aviso de Privacidad</DialogTitle>
           Versión vigente: 24 de noviembre, 2023

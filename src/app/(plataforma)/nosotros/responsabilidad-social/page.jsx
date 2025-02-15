@@ -21,7 +21,7 @@ export default function EsrPage() {
             height={500}
           />
         </div>
-        <div className="space-y-5 my-5 text-justify p-5 rounded-md bg-cont-100">
+        <div className="space-y-5 my-5 text-justify p-5 rounded-md bg-slate-300 dark:bg-cont-100">
           <p>
             Somos una empresa altamente comprometida con la responsabilidad
             social, prueba de ello es que hemos obtenido el Distintivo de

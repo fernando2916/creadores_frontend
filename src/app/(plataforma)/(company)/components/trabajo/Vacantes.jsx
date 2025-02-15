@@ -28,7 +28,7 @@ export const Vacantes = () => {
   return (
     <>
     <header className="pt-[4rem]">
-      <div className="p-[3rem] md:py-[9rem] items-center mx-auto text-center bg-cont-100 ">
+      <div className="p-[3rem] md:py-[9rem] items-center mx-auto text-center bg-slate-300 dark:bg-cont-100 ">
         <span className=" text-link-100 font-bold text-xs md:text-3xl">
           Agencia de Diseño Gráfico, Fotografía eh Impresión
         </span>

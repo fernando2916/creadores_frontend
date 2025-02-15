@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export const CookiesContainer = () => {
   return (
-    <section className="my-10 py-10 bg-cont-100">
+    <section className="my-10 py-10 bg-slate-300 dark:bg-cont-100">
       {/* cabecera */}
       <div className="my flex flex-col items-center justify-center md:mx-auto max-w-7xl">
         <div className=" space-y-3 mx-5">
@@ -23,7 +23,7 @@ export const CookiesContainer = () => {
         </div>
         {/* info */}
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-2 md:mx-5 ">
-          <div className="shadow-lg shadow-cyan-950  bg-nav-900 rounded-xl mx-7 md:mx-2 p-7">
+          <div className="shadow-lg shadow-cyan-950 bg-slate-500 dark:bg-nav-800 rounded-xl mx-7 md:mx-2 p-7">
             <span>
               <Image src='/StickerAdvertising.svg' width={500} height={500} alt="" className="p-5 w-32 md:w-44 justify-center mx-auto" />
             </span>
@@ -35,7 +35,7 @@ export const CookiesContainer = () => {
               </p>
             </div>
           </div>
-          <div className="shadow-lg shadow-cyan-950  bg-nav-900 rounded-xl mx-7 md:mx-2 p-7">
+          <div className="shadow-lg shadow-cyan-950 bg-slate-500 dark:bg-nav-800 rounded-xl mx-7 md:mx-2 p-7">
             {" "}
             <span>
               <Image src='/StickerUserExperience.svg' width={500} height={500} alt="" className="p-5 w-32 md:w-44 justify-center mx-auto" />
@@ -48,7 +48,7 @@ export const CookiesContainer = () => {
               </p>
             </div>
           </div>
-          <div className="shadow-lg shadow-cyan-950  bg-nav-900 rounded-xl mx-7 md:mx-2 p-7">
+          <div className="shadow-lg shadow-cyan-950 bg-slate-500 dark:bg-nav-800 rounded-xl mx-7 md:mx-2 p-7">
             {" "}
             <span>
               <Image src='/StickerSecurity.svg' width={500} height={500} alt="" className="p-5 w-32 md:w-44 justify-center mx-auto" />
@@ -67,13 +67,13 @@ export const CookiesContainer = () => {
       <div className="flex items-center justify-center gap-10 mb-5 mt-10">
         <button
           type="button"
-          className="p-3 bg-btn-400 hover:bg-btn-600 transition-colors duration-150 rounded-lg font-semibold text-sm md:text-lg"
+          className="p-3 bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-lg font-semibold text-sm md:text-lg"
         >
           Configurar cookies
         </button>
         <button
           type="button"
-          className="text-link-100 hover:text-link-300 duration-150 transition-colors font-semibold flex items-center gap-2 text-sm md:text-lg"
+          className="text-link-300 hover:text-link-500 dark:text-link-100 dark:hover:text-link-300 duration-150 transition-colors font-semibold flex items-center gap-2 text-sm md:text-lg"
         >
           Conocer más
           <FaAngleRight />

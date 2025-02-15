@@ -95,8 +95,8 @@ export const Ingresar =() => {
                 placeholder="Ingresa tu Correo Electrónico"
                 className={
                   errors.email || errorMessage
-                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                 }
                 name="email"
                 value={values.email}
@@ -117,8 +117,8 @@ export const Ingresar =() => {
                   placeholder="Ingresa una contraseña"
                   className={
                     errors.password
-                      ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                      ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full placeholder:text-black dark:placeholder:text-gray-400"
+                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                   }
                   name="password"
                   value={values.password}
@@ -140,12 +140,12 @@ export const Ingresar =() => {
 
             <div className="flex justify-between items-center mt-5">
               <div className=" flex items-center gap-1">
-                <input type="checkbox" className="w-4 h-4 accent-btn-200" />
+                <input type="checkbox" className="w-4 h-4 accent-btn-200 dark:accent-btn-400" />
                 <p id="recordar">Recordarme</p>
               </div>
               <Link
                 href="/auth/resetear-contrasena"
-                className="text-sm text-link-100"
+                className="text-sm text-link-300 hover:text-link-600 dark:hover:text-link-300 dark:text-link-100"
               >
                 ¿Olvidaste tu Contraseña?
               </Link>
@@ -155,7 +155,7 @@ export const Ingresar =() => {
                 <button
                   type="submit"
                   disabled={status}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-600 gap-2 items-center"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white disabled:bg-btn-400 dark:bg-btn-600 gap-2 items-center"
                 >
                   <Oval
                     visible={true}
@@ -171,7 +171,7 @@ export const Ingresar =() => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 disabled:bg-btn-600 dark:hover:bg-btn-600 transition-all ease-in gap-2 items-center"
                 >
                   <FaUser />
                   Entrar a mi cuenta
@@ -182,7 +182,7 @@ export const Ingresar =() => {
               <p className="text-center mt-5">
                 ¿No tienes una cuenta?{" "}
                   <Link href="/auth/crear-cuenta">
-                <button disabled={loading} type="button" className="text-link-100 disabled:text-link-500 font-bold">
+                <button disabled={loading} type="button" className="text-link-300 hover:text-link-600 dark:hover:text-link-300 dark:text-link-100 disabled:text-link-500 font-bold">
                   Crear cuenta
                 </button>
                   </Link>

@@ -34,7 +34,7 @@ export default function PrivacySummary(){
         </div>
       </section>
       {/* DATOS PERSONALES */}
-      <section className="bg-cont-100 p-5 my-10">
+      <section className="bg-slate-300 dark:bg-cont-100 p-5 my-10">
         <div className="grid grid-cols-1 md:grid-cols-12 max-w-7xl mx-5 md:mx-auto">
           <div className="col-span-10 space-y-5 ">
             <h2 className="text-2xl md:text-4xl font-semibold">
@@ -175,7 +175,7 @@ export default function PrivacySummary(){
         </div>
       </section>
       {/* QUE HACEMOS CON LOS DATOS   */}
-      <section className="bg-cont-100 p-5 py-10">
+      <section className= "bg-slate-300 dark:bg-cont-100 p-5 py-10">
         <div className="grid grid-cols-1 md:grid-cols-12 max-w-7xl mx-5 md:mx-auto place-items-center">
           <h2 className="text-2xl md:text-4xl font-semibold mb-5 col-span-full">
             ¿Qué hacemos con tus datos?
@@ -185,7 +185,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaHome className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaHome className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Brindarte los productos, servicios y/o beneficios que
@@ -200,7 +200,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaStar className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaStar className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Mejorar nuestros servicios, y desarrollar nuevos para
@@ -211,7 +211,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaBuildingColumns className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaBuildingColumns className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Cumplir con obligaciones legales y requerimientos de
@@ -222,7 +222,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaSearch className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaSearch className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Detectar y prevenir fraudes, para proteger la seguridad de
@@ -233,7 +233,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaShieldAlt className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaShieldAlt className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Proteger derechos de usuarios, de terceros o propios de
@@ -244,7 +244,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaHandshake className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaHandshake className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Colaborar con los titulares de propiedad intelectual en el
@@ -255,7 +255,7 @@ export default function PrivacySummary(){
               <div>
                 <li className="flex items-start gap-5">
                   <div>
-                    <FaTag className="bg-btn-600 p-2 rounded-full text-[2.2rem]" />
+                    <FaTag className="bg-btn-200 dark:bg-btn-600 text-white p-2 rounded-full text-[2.2rem]" />
                   </div>
                   <h3 className="text-base md:text-lg">
                     Efectuar anuncios, contactos publicitarios y promocionales.
@@ -292,7 +292,7 @@ export default function PrivacySummary(){
       </section>
 
       {/* FUNCIONES   */}
-      <section className="p-5 my-10 bg-cont-100">
+      <section className="p-5 my-10 bg-slate-300 dark:bg-cont-100">
         <div className="grid grid-cols-1 md:grid-cols-12 max-w-7xl mx-5 md:mx-auto space-y-5 ">
           <h2 className="text-2xl md:text-4xl font-semibold mb-3 col-span-full">
             ¿Cómo funcionan los servicios de Mercado Libre para menores de edad?
@@ -357,7 +357,7 @@ export default function PrivacySummary(){
         </div>
       </section>
       {/* COOKIES   */}
-       <section className="p-5 my-10 bg-cont-100">
+       <section className="p-5 my-10 bg-slate-300 dark:bg-cont-100">
         <div className="grid grid-cols-1 md:grid-cols-12 max-w-7xl mx-5 md:mx-auto space-y-5 ">
           <h2 className="text-2xl md:text-4xl font-semibold mb-3 col-span-full">
             ¿Qué son las cookies?

@@ -10,7 +10,7 @@ export const InputTalla = () => {
       justify="center"
       maxW="lg"
       defaultValue="paypal">
-      <RadioCardLabel>Payment method</RadioCardLabel>
+      <RadioCardLabel></RadioCardLabel>
     </RadioCardRoot>
      <input 
      type="button" 

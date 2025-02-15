@@ -18,7 +18,7 @@ export const MenuSidePrincipal = ({ onClick: toggleMenu}) => {
         {homeCategory?.items.map((item) => (
           <li
             key={item.id}
-            className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+            className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
             onClick={toggleMenu}
           >
             <Link
@@ -31,14 +31,14 @@ export const MenuSidePrincipal = ({ onClick: toggleMenu}) => {
           </li>
         ))}
       </ul>
-      <h3 className="ml-8 pt-2 font-semibold text-gray-400">
+      <h3 className="ml-8 pt-2 font-semibold text-link-500 dark:text-gray-400">
         Nuestros servicios
       </h3>
       <ul className="p-3 border-b">
         {serviciosCategory?.items.map((item) => (
           <li
             key={item.id}
-            className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+            className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
             onClick={toggleMenu}
           >
             <Link
@@ -51,12 +51,12 @@ export const MenuSidePrincipal = ({ onClick: toggleMenu}) => {
           </li>
         ))}
       </ul>
-      <h3 className="ml-8 pt-2 font-semibold text-gray-400">Sobre nosotros</h3>
+      <h3 className="ml-8 pt-2 font-semibold text-link-500 dark:text-gray-400">Sobre nosotros</h3>
       <ul className="p-3 border-b">
         {empresaCategory?.items.map((item) => (
           <li
             key={item.id}
-            className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+            className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
             onClick={toggleMenu}
           >
             <Link
@@ -71,10 +71,10 @@ export const MenuSidePrincipal = ({ onClick: toggleMenu}) => {
       </ul>
       <ul className="p-2">
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
-          <Link href="/" className="text-sm text-link-100 font-semibold">
+          <Link href="/" className="text-sm text-link-400 dark:text-link-100 font-semibold">
             Emprendedores Creativos &copy; {""}
           </Link>
           <span className="text-sm font-semibold">

@@ -38,7 +38,7 @@ export const MenuPrincial = () => {
                       {servicios.map((servicio) => (
                         <li
                           key={servicio.name}
-                          className="hover:bg-nav-700 rounded-md transition-colors duration-150 px-5 py-2 w-64"
+                          className="hover:bg-slate-400 dark:hover:bg-nav-700 rounded-md transition-colors duration-150 px-5 py-2 w-64"
                         >
                           <Link href={servicio.href} className="flex items-center gap-2">
                             {servicio.icon}
@@ -65,7 +65,7 @@ export const MenuPrincial = () => {
             </Link>
           </li>
           <li className="hover:text-link-100 transition-colors duration-150">
-            <Link href="cursos" className="flex items-center gap-1">
+            <Link href="/cursos" className="flex items-center gap-1">
               <FaVideo />
               Cursos
             </Link>
@@ -83,7 +83,7 @@ export const MenuPrincial = () => {
                       {company.map((item) => (
                         <li
                           key={item.name}
-                          className="hover:bg-nav-700 rounded-md transition-colors duration-150 px-5 py-2 w-64"
+                          className="hover:bg-slate-400 dark:hover:bg-nav-700 rounded-md transition-colors duration-150 px-5 py-2 w-64"
                         >
                           <Link href={item.href} className="flex items-center gap-2">
                             {item.icon}

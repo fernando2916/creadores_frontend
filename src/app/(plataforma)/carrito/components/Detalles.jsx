@@ -123,7 +123,7 @@ export const Detalles = () => {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="mt-16 bg-nav-800 rounded-lg px-4 py-6 sm:p-6 lg:p-8 lg:mt-0 lg:col-span-5"
+            className="mt-16 bg-slate-300 dark:bg-nav-800 rounded-lg px-4 py-6 sm:p-6 lg:p-8 lg:mt-0 lg:col-span-5"
           >
             <h2 id="summary-heading" className="text-lg font-medium">
               Resumen de pedido
@@ -163,7 +163,7 @@ export const Detalles = () => {
             <div className="mt-6">
               <button
                 type="submit"
-                className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                className="w-full bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium transition-colors duration-150"
               >
                 Checkout
               </button>

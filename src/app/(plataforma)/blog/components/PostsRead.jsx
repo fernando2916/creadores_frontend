@@ -8,15 +8,15 @@ export const PostsRead = () => {
       <h3 className="mb-4 text-2xl font-semibold">Lo más leído</h3>
       <ul className="flex flex-col gap-4">
         <Link href="#">
-          <article className="grid grid-cols-5 gap-4 items-start">
+          <article className="grid grid-cols-5 gap-4 items-start bg-slate-400 dark:bg-cont-100 rounded-lg">
             <Image
               src="/Equipo.webp"
               width={350}
               height={100}
               className="col-span-2 rounded-lg overflow-hidden aspect-video object-cover h-[8rem] w-[26rem]"
             />
-            <div className="col-span-3 space-y-2">
-              <span className="bg-link-500 py-1 rounded-md px-2 text-xs font-semibold">
+            <div className="col-span-3 space-y-2 p-2">
+              <span className="bg-categoria-200 dark:bg-categoria-100 text-white py-1 rounded-md px-2 text-xs font-semibold">
                 Categoria
               </span>
               <h3 className="mb-2">Titulo</h3>

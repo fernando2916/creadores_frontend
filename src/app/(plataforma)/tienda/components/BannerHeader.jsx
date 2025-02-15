@@ -3,7 +3,7 @@ import Image from "next/image"
 export const BannerHeader = () => {
   return (
     <div className="pt-[5rem]">
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-slate-300 dark:bg-cont-100">
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
@@ -100,7 +100,7 @@ export const BannerHeader = () => {
 
               <a
                 href="#"
-                className="inline-block rounded-md bg-btn-400 px-8 py-3 text-center font-medium hover:bg-btn-600 duration-150 transition-colors"
+                className="inline-block rounded-md px-8 py-3 text-center font-medium bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 duration-150 transition-colors"
               >
                 Shop Collection
               </a>

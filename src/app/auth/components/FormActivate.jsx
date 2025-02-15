@@ -80,7 +80,7 @@ export const ActivacionDeCuenta = () => {
       <Link href='/auth/resetear-codigo'>
       <button
         disabled={loading}
-        className="flex gap-2 font-semibold text-xl items-center mx-auto bg-btn-400 hover:bg-btn-600 p-2 disabled:bg-btn-600 transition-colors rounded-md mt-10"
+        className="flex gap-2 font-semibold text-xl items-center mx-auto bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 disabled:bg-btn-600 dark:hover:bg-btn-600 text-white p-2 transition-colors rounded-md mt-10"
         type="submit"
         >
         Solicitar nuevo código

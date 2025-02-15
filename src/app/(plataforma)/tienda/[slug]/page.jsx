@@ -19,12 +19,12 @@ export default function ProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 p-5 max-w-7xl mx-2 md:mx-auto">
           <div className="col-span-6 p-5 relative">
             <Image src='/MEXICO.jpg' alt="image_title" className='' width={700} height={50} priority={'false'} />
-            <span className="absolute top-6 left-9 bg-categoria-100 rounded-lg p-2 font-semibold text-sm">
+            <span className="absolute top-6 left-9 bg-categoria-200 text-white dark:bg-categoria-100 rounded-lg p-2 font-semibold text-sm">
               Nuevo
             </span>
-            <div className="absolute top-6 right-9 text-xl bg-btn-400 hover:bg-btn-600 transition-colors duration-150 p-3 rounded-full">
+            <button className="absolute top-6 right-9 text-xl bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 p-3 rounded-full">
               <FaHeart title="Agregar a mis deseos" />
-            </div>
+            </button>
           </div>
           <div className="col-span-6 py-5 space-y-3">
             <div className='flex justify-between items-center mr-5'>
@@ -94,14 +94,14 @@ export default function ProductPage() {
               <div className="col-span-full w-full pt-10 grid  mx-auto gap-5">
                 <button
                   type="button"
-                  className="p-3 bg-btn-400 hover:bg-btn-600 transition-colors duration-150 rounded-md font-semibold flex justify-center items-center gap-2"
+                  className="p-3 bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md font-semibold flex justify-center items-center gap-2"
                 >
                   <FaShoppingCart />
                   Añadir al carrito
                 </button>
                 <button
                   type="button"
-                  className="p-3 bg-link-400 hover:bg-link-600 transition-colors duration-150 rounded-md font-semibold flex justify-center items-center gap-2" 
+                  className="p-3 bg-link-200 hover:bg-link-400 dark:bg-link-400 text-white dark:hover:bg-link-600 transition-colors duration-150 rounded-md font-semibold flex justify-center items-center gap-2" 
                 >
                   <FaCreditCard />
                   Comprar ahora
@@ -301,7 +301,7 @@ export default function ProductPage() {
           </div>
           <div className="col-span-full md:w-[50rem] my-5 space-y-5">
             {/* COMENTARIOS */}
-            <div className="bg-cont-100 p-5 rounded-md ">
+            <div className="bg-slate-300 dark:bg-cont-100 p-5 rounded-md ">
               <div className="flex justify-between items-start gap-3">
                 <div className="flex gap-x-2">
                   <FaUserCircle className="text-3xl mt-1.5" />
@@ -320,7 +320,7 @@ export default function ProductPage() {
               </div>
               <p className="text-justify text-xs md:text-sm mt-2 ml-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quis recusandae eaque quaerat doloribus omnis beatae ea in a excepturi aspernatur illum similique cupiditate enim rerum, odio sequi possimus accusamus!</p>
             </div>
-            <div className="bg-cont-100 p-5 rounded-md ">
+            <div className="bg-slate-300 dark:bg-cont-100 p-5 rounded-md ">
               <div className="flex justify-between items-start gap-3">
                 <div className="flex gap-x-2">
                   <FaUserCircle className="text-3xl mt-1.5" />
@@ -352,65 +352,68 @@ export default function ProductPage() {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8 my-5  ">
-          <article className="bg-nav-900 rounded-lg">
-            <div className="relative">
-              <Image
-                className=" object-cover aspect-square w-full rounded-t-md"
-                alt=""
-                width={700} height={50}
-                src='/Chuckey.png'
-              />
-              <div className="absolute top-2 right-2 text-xl bg-btn-400 hover:bg-btn-600 transition-colors duration-150 p-3 rounded-full">
-                <FaHeart title="Agregar a mis deseos" />
-              </div>
-              <span className="bg-btn-200 py-1 rounded-md px-2 text-sm font-bold absolute top-3 left-3">
-                Nuevo
-              </span>
-              <span className="bg-alerts-300 ml-16 text-black py-1 rounded-md px-2 text-sm font-bold absolute top-3 left-3">
-                Más Vendido
-              </span>
-            </div>
-            <div className="p-4 space-y-3">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-lg md:text-2xl font-bold text-link-200">
-                    Chucky Malvado
-                  </h3>
-                  <span className="font-semibold">Transfer Digital</span>
-                </div>
-                <span className="text-lg font-semibold">$ 450.00 MXN</span>
-              </div>
-              <div className="flex items-center text-xs md:text-sm gap-1">
-                <span>4.2</span>
-                <FaStar className="text-alerts-300" />
-                <FaStar className="text-alerts-300" />
-                <FaStar className="text-alerts-300" />
-                <FaStar className="text-alerts-300" />
-                <FaRegStar />
-              </div>
-              <div className="">
-                <p className="line-clamp-3 text-justify text-sm ">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Dicta eaque eos totam distinctio dolorum, quam incidunt illo
-                  architecto dolor fugiat voluptas, accusamus qui! Quisquam
-                  perspiciatis nihil, et incidunt cupiditate nobis! Aperiam ea
-                  hic temporibus dignissimos iure assumenda amet, nemo ex
-                  dolorem, autem aliquam tempore laboriosam voluptates
-                  aspernatur modi tempora sit, nihil ad iusto saepe! Rem minus
-                  vitae dolorem eos nesciunt?
-                </p>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  className="bg-btn-400 hover:bg-btn-600 transition-colors duration-150 rounded-md p-2 flex items-center gap-1 w-full text-lg font-semibold col-span-6 justify-center"
-                >
-                  <FaShoppingCart />
-                  Añadir al carrito
-                </button>
-              </div>
-            </div>
-          </article>
+          <article className=" bg-slate-300 dark:bg-nav-800 rounded-lg">
+                    <div className="relative">
+                      <Image
+                        src="/Chuckey.png"
+                        width={500}
+                        height={300}
+                        alt="chukey"
+                        className="object-cover aspect-square w-full rounded-t-md"
+                      />
+                      <div className="absolute top-2 right-2 text-xl bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 p-3 rounded-full">
+                        <FaHeart title="Agregar a mis deseos" />
+                      </div>
+                        <span className="bg-btn-200 text-white dark:bg-btn-600 py-1 rounded-md px-2 text-sm font-bold absolute top-3 left-3">
+                          Nuevo
+                        </span>
+                        <span className="bg-amber-500  dark:bg-alerts-300 ml-16 text-black py-1 rounded-md px-2 text-sm font-bold absolute top-3 left-3">
+                          Más Vendido
+                        </span>
+                    </div>
+                    <div className="p-4 space-y-3">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <h3 className="text-lg md:text-2xl font-bold text-link-200">
+                            Chucky Malvado
+                          </h3>
+                          <div className="flex items-center gap-16">
+                        <span className="font-semibold">Transfer Digital</span>
+                        <span className="text-sm font-semibold">$ 450.00 MXN</span>
+                        </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center text-xs md:text-sm gap-1">
+                        <FaStar className="text-alerts-300" />
+                        <FaStar className="text-alerts-300" />
+                        <FaStar className="text-alerts-300" />
+                        <FaStar className="text-alerts-300" />
+                        <FaStar className="text-alerts-300" />
+                        <span>(4.2)</span>
+                      </div>
+                      <div className="">
+                        <p className="line-clamp-3 text-justify text-sm ">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                          eaque eos totam distinctio dolorum, quam incidunt illo
+                          architecto dolor fugiat voluptas, accusamus qui! Quisquam
+                          perspiciatis nihil, et incidunt cupiditate nobis! Aperiam ea hic
+                          temporibus dignissimos iure assumenda amet, nemo ex dolorem,
+                          autem aliquam tempore laboriosam voluptates aspernatur modi
+                          tempora sit, nihil ad iusto saepe! Rem minus vitae dolorem eos
+                          nesciunt?
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-5 flex-1">
+                        <button
+                          type="button"
+                          className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md p-2 flex items-center gap-1 w-full text-sm font-semibold col-span-6 justify-center"
+                        >
+                          <FaShoppingCart />
+                          Añadir al carrito
+                        </button>
+                      </div>
+                    </div>
+                  </article>
         </div>
       </div>
     </section>

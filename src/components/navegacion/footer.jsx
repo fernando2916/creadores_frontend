@@ -7,7 +7,7 @@ export const Footer = () => {
   const today = new Date();
   const reserv = today.getFullYear();
   return (
-    <footer className="bg-nav-900">
+    <footer className="bg-white dark:bg-nav-900">
     <h2 className="sr-only">Footer</h2>
     <div className="mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -20,7 +20,7 @@ export const Footer = () => {
               <ul className="mt-4 space-y-4" role="list">
                 {menu.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="hover:text-link-100">
+                    <Link href={item.href} className="hover:text-link-300">
                       {item.name}
                     </Link>
                   </li>
@@ -34,7 +34,7 @@ export const Footer = () => {
               <ul className="mt-4 space-y-4" role="list">
                 {soporte.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="hover:text-link-100">
+                    <Link href={item.href} className="hover:text-link-300">
                       {item.name}
                     </Link>
                   </li>
@@ -50,7 +50,7 @@ export const Footer = () => {
               <ul className="mt-4 space-y-4" role="list">
                 {compania.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="hover:text-link-100">
+                    <Link href={item.href} className="hover:text-link-300">
                       {item.name}
                     </Link>
                   </li>
@@ -64,7 +64,7 @@ export const Footer = () => {
               <ul className="mt-4 space-y-4" role="list">
                 {legal.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="hover:text-link-100">
+                    <Link href={item.href} className="hover:text-link-300">
                       {item.name}
                     </Link>
                   </li>
@@ -77,7 +77,7 @@ export const Footer = () => {
           <h3 className="text-sm font-bold text-link-100 tracking-wider uppercase">
             Suscríbete a Nuestro Boletín
           </h3>
-          <p className="mt-4 text-sm text-gray-300">
+          <p className="mt-4 text-sm dark:text-gray-300">
             Nos importa mucho tu privacidad, por lo tanto solo enviamos 5
             correos por mes.
           </p>
@@ -95,9 +95,9 @@ export const Footer = () => {
                 required
                 type="email"
                 placeholder="Ingresa tu Correo Electrónico"
-                className="bg-transparent border-2 placeholder:text-gray-400 border-link-100 p-2 focus:shadow-md focus:shadow-link-200 rounded-md mt-3 md:mt-2 outline-none w-full md:w-[70%]"
+                className="bg-transparent border-2 placeholder:text-black placeholder:font-semibold dark:placeholder:font-semibold dark:placeholder:text-gray-400 border-link-100 p-2 focus:shadow-md focus:shadow-link-200 rounded-md mt-3 md:mt-2 outline-none w-full md:w-[70%]"
               />
-              <button className="bg-btn-400 hover:bg-btn-600 transition-all flex gap-1 items-center p-2 rounded-md mt-3 md:mt-2 text-md font-medium justify-center w-full md:w-[30%]">
+              <button className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-all flex gap-1 items-center p-2 rounded-md mt-3 md:mt-2 text-md font-medium justify-center w-full md:w-[30%]">
                 <FaEnvelope />
                 Suscríbete
               </button>

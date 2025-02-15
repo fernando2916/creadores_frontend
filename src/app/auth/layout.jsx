@@ -19,7 +19,7 @@ export default function AuthPage({children}) {
         </div>
 
         <div className="mt-8 mx-3 sm:mx-auto w-[95%] sm:max-w-md">
-          <div className=" bg-nav-800 py-8 px-4 rounded-xl sm:px-10 h-auto">
+          <div className="bg-slate-300 dark:bg-nav-800 py-8 px-4 rounded-xl sm:px-10 h-auto">
             {children}
           </div>
         </div>

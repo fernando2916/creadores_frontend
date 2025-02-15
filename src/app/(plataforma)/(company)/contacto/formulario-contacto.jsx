@@ -53,7 +53,7 @@ export const FormularioContacto = () => {
         <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Formulario de contacto
         </h3>
-        <p className="mt-2 md:text-base text-gray-200 text-xs lg:flex">
+        <p className="mt-2 md:text-base text-slate-600 dark:text-slate-300 text-xs lg:flex">
           ¿Tienes un proyecto en mente? Cuéntanos tu idea y estaremos
           encantados de ayudarte.
         </p>
@@ -76,8 +76,8 @@ export const FormularioContacto = () => {
               error={errors.name}
               className={
                 errors.name
-                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                  : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
               }
             />
             <p className="text-sm text-red-400 font-semibold">
@@ -96,8 +96,8 @@ export const FormularioContacto = () => {
               placeholder="Ingresa tu Correo Electrónico"
               className={
                 errors.email
-                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                  : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
               }
             />
             <p className="text-sm text-red-400 font-semibold">
@@ -110,7 +110,7 @@ export const FormularioContacto = () => {
               type="text"
               id="company"
               placeholder="Negocio o independiente"
-              className="bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+              className="bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
             />
           </div>
           <div className=" flex flex-col space-y-2">
@@ -128,8 +128,8 @@ export const FormularioContacto = () => {
               placeholder="Numero de Contacto"
               className={
                 errors.phone
-                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                  : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
               }
             />
             <p className="text-sm text-red-400 font-semibold">
@@ -148,8 +148,8 @@ export const FormularioContacto = () => {
               error={errors.mensaje}
               className={
                 errors.mensaje
-                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                  : "bg-transparent p-2 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                  ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
               }
               placeholder="Escribenos tus dudas..."
             />
@@ -160,7 +160,7 @@ export const FormularioContacto = () => {
           <p className="">Puedes revisar el <Politicas/> si tienes dudas con el manejo de tus datos personales.</p>
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 w-full rounded-md bg-btn-400 hover:bg-btn-600 px-3.5 py-2.5 mt-5 text-center text-sm font-semibold duration-150 shadow-sm uppercase transition-colors"
+            className="flex items-center justify-center gap-2 w-full rounded-md bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 px-3.5 py-2.5 mt-5 text-center text-sm font-semibold duration-150 shadow-sm uppercase transition-colors"
           >
             <FaEnvelope />
             Solicitar más Información

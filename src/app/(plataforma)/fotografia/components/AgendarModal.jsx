@@ -10,9 +10,9 @@ export const AgendarModal = () => {
   return (
     <DialogRoot>
       <DialogTrigger asChild>
-        <button className="bg-btn-400 hover:bg-btn-600 transition-colors duration-150 mx-1 px-3 py-2 rounded-lg">Agendar Sesión</button>
+        <button className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 mx-1 px-3 py-2 rounded-lg">Agendar Sesión</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] bg-nav-800">
+      <DialogContent className="sm:max-w-[425px] bg-slate-400 dark:bg-nav-800">
         <DialogHeader>
           <DialogTitle> Aviso de Privacidad</DialogTitle>
         </DialogHeader>

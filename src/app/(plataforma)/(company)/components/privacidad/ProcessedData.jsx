@@ -63,7 +63,7 @@ export const ProcessedData = () => {
           <div className="my-5">
             <button
               type="button"
-              className="p-3 bg-btn-400 hover:bg-btn-600 transition-colors duration-150 rounded-lg font-semibold text-sm md:text-lg w-full md:w-auto"
+              className="p-3 bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-lg font-semibold text-sm md:text-lg w-full md:w-auto"
             >
               Conocer más
             </button>

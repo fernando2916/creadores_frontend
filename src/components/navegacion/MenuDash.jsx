@@ -42,7 +42,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
     <>
       <ul className="p-3 border-b">
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link href="/" className="flex items-center gap-3 p-3 text-lg">
@@ -52,7 +52,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
         </li>
         <li
           onClick={toggleMenu}
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
         >
           <Link href="/blog" className="flex items-center gap-3 p-3 text-xl">
             <FaBook />
@@ -61,7 +61,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
         </li>
         <li
           onClick={toggleMenu}
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
         >
           <Link href="/tienda" className="flex items-center gap-3 p-3 text-xl">
             <FaShoppingBag />
@@ -70,7 +70,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
         </li>
         <li
           onClick={toggleMenu}
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
         >
           <Link href="/cursos" className="flex items-center gap-3 p-3 text-xl">
             <FaVideo />
@@ -78,7 +78,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -96,7 +96,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -108,7 +108,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -120,7 +120,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -133,7 +133,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
         </li>
 
         {/* <li
-            className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+            className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
             onClick={toggleMenu}
           >
             <Link href="mi-cuenta" className="flex items-center gap-3 p-3 text-lg">
@@ -142,7 +142,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
             </Link>
           </li> */}
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -154,7 +154,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link href="/soporte" className="flex items-center gap-3 p-3 text-lg">
@@ -163,7 +163,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -181,7 +181,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           <span className="">Nuestros Servicios</span>
         </div>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -193,7 +193,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -205,7 +205,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -217,7 +217,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -229,7 +229,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -246,7 +246,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           <span className="">Más de Emprendedores</span>
         </div>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -258,7 +258,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -270,7 +270,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -282,7 +282,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -294,7 +294,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -306,7 +306,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           </Link>
         </li>
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link
@@ -320,7 +320,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
       </ul>
       <ul className="p-2">
         <li
-          className="hover:bg-nav-700 pl-3 rounded-lg transition-all"
+          className="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
           onClick={toggleMenu}
         >
           <Link href="/" className="text-sm text-link-100 font-semibold">

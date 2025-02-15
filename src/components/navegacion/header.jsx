@@ -24,7 +24,7 @@ export const Header = () => {
   const isAuthenticated = status === 'Authenticated';
 
   return (
-    <header className="flex justify-between w-full items-center p-4 bg-nav-900 fixed w-ful z-50">
+    <header className="flex justify-between w-full items-center p-4 bg-white dark:bg-nav-900 fixed w-ful z-50">
         
         <div>
             <Link href='/'>

@@ -17,14 +17,14 @@ export const Posts = () => {
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-8">
           <Link href="#" className="block rounded-lg overflow-hidden mb-4">
-            <article className="bg-nav-800">
+            <article className="bg-slate-400 dark:bg-nav-800">
               <div className="">
                 <Image
                   src="/Equipo.webp"
                   className="object-cover aspect-video w-full relative"
                   alt="imagen en espera"
-                  width={150}
-                  height={150}
+                  width={500}
+                  height={500}
                 />
                 <p className="">Fecha de publicación</p>
               </div>

@@ -28,7 +28,7 @@ export default function CursosPage() {
               </div>
             </div>
             <div className="mb-4">
-            <button className="p-2 rounded-md bg-btn-400 hover:bg-btn-600 transition-colors duration-150 font-semibold mt-2">
+            <button className="p-2 rounded-md bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 font-semibold mt-2">
               APLICAR FILTROS
             </button>
             </div>
@@ -97,10 +97,10 @@ export default function CursosPage() {
                 </figure>
                 <div className="flex-1 mt-2 sm:mt-0 sm:ml-4 sm:mr-6 lg:mr-12">
                   <h3 className="text-lg mb-1 leading-5 text-link-100">Aprende a documentar APIs con Swagger</h3>
-                  <p className="text-sm text-gray-300 line-clamp-3 mb-1">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-3 mb-1">
                   Aprende a documentar APIs con Swagger de manera clara y profesional. Domina OpenAPI, genera documentación interactiva y facilita la integración de tus servicios.
                   </p>
-                  <p className="text-gray-300 text-sm font-semibold mb-1">Prof: Victor Arana Flores</p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm font-semibold mb-1">Prof: Victor Arana Flores</p>
                   <div className="flex items-center">
                     <ul className="flex items-center space-x-1 text-xs">
                       <li>
@@ -119,96 +119,14 @@ export default function CursosPage() {
                         <FaStar className="text-alerts-300"/>
                       </li>
                     </ul>
-                    <span className="text-sm text-gray-200 font-semibold ml-1">
+                    <span className="text-sm text-slate-600 dark:text-slate-200 font-semibold ml-1">
                       (5)
                     </span>
                   </div>
                 </div>
                 <div>
                   <div className="flex items-center sm:block">
-                    <p className="font-semibold text-gray-200">$ 450.00 MXN</p>
-                  </div>
-                </div>
-              </Link>
-            </li>
-            <li className="">
-              <Link href='/#' className="block sm:flex w-full">
-                <figure>
-                  <Image src='/tren maya.jpg' className="w-full sm:w-36 md:w-64 aspect-[16/9] object-cover object-center" width={500} height={500} alt=" Imagen"/>
-                </figure>
-                <div className="flex-1 mt-2 sm:mt-0 sm:ml-4 sm:mr-6 lg:mr-12">
-                  <h3 className="text-lg mb-1 leading-5 text-link-100">Aprende a documentar APIs con Swagger</h3>
-                  <p className="text-sm text-gray-300 line-clamp-3 mb-1">
-                  Aprende a documentar APIs con Swagger de manera clara y profesional. Domina OpenAPI, genera documentación interactiva y facilita la integración de tus servicios.
-                  </p>
-                  <p className="text-gray-300 text-sm font-semibold mb-1">Prof: Victor Arana Flores</p>
-                  <div className="flex items-center">
-                    <ul className="flex items-center space-x-1 text-xs">
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                    </ul>
-                    <span className="text-sm text-gray-200 font-semibold ml-1">
-                      (5)
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-center sm:block">
-                    <p className="font-semibold text-gray-200">$ 450.00 MXN</p>
-                  </div>
-                </div>
-              </Link>
-            </li>
-            <li className="">
-              <Link href='/#' className="block sm:flex w-full">
-                <figure>
-                  <Image src='/tren maya.jpg' className="w-full sm:w-36 md:w-64 aspect-[16/9] object-cover object-center" width={500} height={500} alt=" Imagen"/>
-                </figure>
-                <div className="flex-1 mt-2 sm:mt-0 sm:ml-4 sm:mr-6 lg:mr-12">
-                  <h3 className="text-lg mb-1 leading-5 text-link-100">Aprende a documentar APIs con Swagger</h3>
-                  <p className="text-sm text-gray-300 line-clamp-3 mb-1">
-                  Aprende a documentar APIs con Swagger de manera clara y profesional. Domina OpenAPI, genera documentación interactiva y facilita la integración de tus servicios.
-                  </p>
-                  <p className="text-gray-300 text-sm font-semibold mb-1">Prof: Victor Arana Flores</p>
-                  <div className="flex items-center">
-                    <ul className="flex items-center space-x-1 text-xs">
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                      <li>
-                        <FaStar className="text-alerts-300"/>
-                      </li>
-                    </ul>
-                    <span className="text-sm text-gray-200 font-semibold ml-1">
-                      (5)
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-center sm:block">
-                    <p className="font-semibold text-gray-200">$ 450.00 MXN</p>
+                    <p className="font-semibold text-slate-600 dark:text-slate-200">$ 450.00 MXN</p>
                   </div>
                 </div>
               </Link>

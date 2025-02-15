@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="es">
-      <body className="dark:bg-fondo-100 dark:text-white selection:text-white selection:bg-selec-100">
+      <body className="dark:bg-fondo-100 bg-gray-200 text-black dark:text-white selection:text-white selection:bg-selec-100">
       <DarkModeProvider>
         <RootProvider>
             <Providers>

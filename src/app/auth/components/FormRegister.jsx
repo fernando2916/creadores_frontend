@@ -129,8 +129,8 @@ export const Registro = () => {
                 placeholder="Ingresa tu Nombre "
                 className={
                   errors.name
-                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                 }
                 name="name"
                 value={values.name}
@@ -156,8 +156,8 @@ export const Registro = () => {
                 placeholder="Ingresa tu apellido "
                 className={
                   errors.lastName
-                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                 }
                 name="lastName"
                 value={values.lastName}
@@ -182,8 +182,8 @@ export const Registro = () => {
                 placeholder="Ingresa tu Correo Electrónico"
                 className={
                   errorMessage || errors.email
-                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                 }
                 name="email"
                 value={values.email}
@@ -210,8 +210,8 @@ export const Registro = () => {
                   placeholder="Ingresa una contraseña"
                   className={
                     errors.password
-                      ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                      ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full placeholder:text-black dark:placeholder:text-gray-400"
+                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                   }
                   name="password"
                   value={values.password}
@@ -245,8 +245,8 @@ export const Registro = () => {
                   placeholder="Repite la contraseña"
                   className={
                     errors.password2
-                      ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full"
-                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full"
+                      ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 w-full placeholder:text-black dark:placeholder:text-gray-400"
+                      : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                   }
                   name="password2"
                   value={values.password2}
@@ -283,7 +283,7 @@ export const Registro = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white bg-btn-600 gap-2"
+                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-lg font-bold text-white disabled:bg-btn-400 dark:bg-btn-600 gap-2"
                 >
                   <Oval
                     visible={true}
@@ -299,7 +299,7 @@ export const Registro = () => {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-400 disabled:bg-btn-600 hover:bg-btn-600 transition-all ease-in gap-2"
+                  className="w-full flex items-center justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold text-white bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 disabled:bg-btn-600 dark:hover:bg-btn-600 transition-all ease-in gap-2"
                 >
                   <FaSignInAlt />
                   Crear Cuenta
@@ -312,7 +312,7 @@ export const Registro = () => {
               <Link href="/auth/ingresar">
               <button 
               disabled={loading} 
-              className="text-link-100 disabled:text-link-500 font-bold ml-2">
+              className="text-link-300 hover:text-link-600 dark:text-link-100 dark:hover:text-link-300 disabled:text-link-500 font-bold ml-2">
                 Ingresar
               </button>
                 </Link>

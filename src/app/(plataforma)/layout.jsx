@@ -17,7 +17,7 @@ export default function({children}) {
         <ScrollToTop 
           smooth 
           component={<FaAngleUp/>} 
-          className="!rounded-full !bg-btn-400 !text-xl !font-semibold !p-3 !right-7 !bottom-7 !shadow-none !z-50 !shadow-transparent !flex items-center"/>
+          className="!rounded-full !bg-btn-200 hover:!bg-btn-400 !text-white dark:!bg-btn-400 dark:hover:!bg-btn-600 !text-xl !font-semibold !p-3 !right-7 !bottom-7 !shadow-none !z-50 !shadow-transparent !flex items-center transition-colors duration-150"/>
         {children}
       <Footer/>
     </>

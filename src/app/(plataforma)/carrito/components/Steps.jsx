@@ -36,12 +36,12 @@ export const Steps = () => {
 
       <Group className="gap-10">
         <StepsPrevTrigger asChild>
-          <Button variant="outline" size="sm" className='bg-btn-400 hover:bg-btn-600 transition-colors duration-300 p-2' >
+          <Button variant="outline" size="sm" className='bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-300 p-2' >
             Regresar
           </Button>
         </StepsPrevTrigger>
         <StepsNextTrigger asChild>
-          <Button variant="outline" size="sm" className='bg-btn-400 hover:bg-btn-600 transition-colors duration-300 p-2'>
+          <Button variant="outline" size="sm" className='bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-300 p-2'>
             Continuar
           </Button>
         </StepsNextTrigger>

@@ -55,8 +55,10 @@ module.exports = {
   				'500': '#EB0000'
   			},
   			categoria: {
-  				'100': '#005761'
+  				'100': '#005761',
+  				'200': '#0369a1'
   			},
+			
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

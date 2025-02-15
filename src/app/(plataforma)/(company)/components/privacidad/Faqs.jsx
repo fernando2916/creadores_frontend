@@ -8,7 +8,7 @@ import { FaAngleRight } from "react-icons/fa";
 
 export const Faqs = () => {
   return (
-    <section className="py-5 bg-cont-100">
+    <section className="py-5 bg-slate-300 dark:bg-cont-100">
       <div className="grid grid-col-12 max-w-7xl mx-5 md:mx-auto">
         <div className="col-span-10 -start-2">
           <h2 className=" py-5 text-xl md:text-3xl font-semibold text-center">

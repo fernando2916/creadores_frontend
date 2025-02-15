@@ -86,8 +86,8 @@ export const RecuperarContraseña = () => {
                 placeholder="Ingresa tu Correo Electrónico"
                 className={
                   errors.email || errorMessage?.message
-                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500"
-                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200"
+                    ? "bg-transparent p-2 rounded-md border-alerts-500 border-2 outline-none focus:shadow-md focus:shadow-alerts-500 placeholder:text-black dark:placeholder:text-gray-400"
+                    : "bg-transparent p-2 disabled:bg-nav-900 disabled:border-nav-900 rounded-md border-link-100 border-2 outline-none focus:shadow-md focus:shadow-link-200 w-full placeholder:text-black dark:placeholder:text-gray-400"
                 }
                 name="email"
                 value={values.email}
@@ -103,7 +103,7 @@ export const RecuperarContraseña = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-600 gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold disabled:bg-btn-400 dark:bg-btn-600 gap-2 items-center"
               >
                 <Oval
                   visible={true}
@@ -119,7 +119,7 @@ export const RecuperarContraseña = () => {
               <button
               disabled={loading}
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 gap-2 items-center"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-base font-bold bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 disabled:bg-btn-600 dark:hover:bg-btn-600 text-white gap-2 items-center transition-colors duration-150"
               >
                 <FaEnvelope />
                 Restablecer contraseña
@@ -130,7 +130,7 @@ export const RecuperarContraseña = () => {
               <p className="text-center mt-5 mb-3">
                 ¿Aún no tienes cuenta?{" "}
                   <Link href="/auth/crear-cuenta">
-                <button disabled={loading} className="text-link-100 font-bold disabled:text-link-500">
+                <button disabled={loading} className="text-link-300 hover:text-link-600 dark:hover:text-link-300 dark:text-link-100 disabled:text-link-500 font-bold">
                   Crear cuenta
                 </button>
                   </Link>

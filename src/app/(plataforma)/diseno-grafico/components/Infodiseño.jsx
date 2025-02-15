@@ -39,7 +39,7 @@ export const Infodiseño = () => {
           </div>
         </section>
         <InfoSection
-          className='bg-cont-100'
+          className='bg-slate-300 dark:bg-cont-100'
           title={"Comunicación visual en la actualidad"}
           img={<Image src='/diseñadora.svg' alt="imagen ilustrativa" width={500} height={500} />}>
           <p className="text-justify mt-10 text-lg">
@@ -226,7 +226,7 @@ export const Infodiseño = () => {
           </div>
         </section>
 
-        <section className="py-5 flex items-center bg-cont-100">
+        <section className="py-5 flex items-center bg-slate-300 dark:bg-cont-100">
           <div className="max-w-7xl mx-auto">
 
           <div className="flex flex-col  p-10 w-full justify-center items-center mx-auto">
@@ -247,7 +247,7 @@ export const Infodiseño = () => {
             <h3 className="text-4xl font-semibold mx-14">
               Por qué deberías elegirnos como tu agencia de diseño
             </h3>
-            <p className="pt-2 mx-10 mb-10 text-gray-100">
+            <p className="pt-2 mx-10 mb-10 text-slate-600 dark:text-slate-100">
               Encontraremos las mejores alternativas para que tu marca tenga ese
               impacto que estás buscando para tu negocio.
             </p>
@@ -260,19 +260,19 @@ export const Infodiseño = () => {
                     {item.icon}
                   </span>
                   <h2 className="text-xl font-medium ">{item.title}</h2>
-                  <p className="mx-5 text-lg text-justify text-gray-100">{item.text}</p>
+                  <p className="mx-5 text-lg text-justify ">{item.text}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
-        <section className="py-10 px-8 mx-auto items-center bg-cont-100">
+        <section className="py-10 px-8 mx-auto items-center bg-slate-300 dark:bg-cont-100">
           <div className=" text-center max-w-4xl mx-auto">
             <p className="mt-2 font-bold tracking-tight text-5xl leading-none">
               Precios de nuestros paquetes de diseño.
             </p>
           </div>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-xl leading-8 text-gray-100">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-xl leading-8 text-slate-600 dark:text-slate-100">
             Hemos armado 3 paquetes que cumplen tus necesidades desde las
             básicas hasta los complementos impresos.
           </p>
@@ -282,7 +282,7 @@ export const Infodiseño = () => {
               <div className=" flex items-center justify-between gap-4">
                 <h3 className="text-xl font-semibold leading-8 text-link-100 ">Básico</h3>
               </div>
-              <p className="mt-5 text-xs leading-6 text-justify text-gray-100">
+              <p className="mt-5 text-xs leading-6 text-justify">
                 El paquete ideal para iniciar tu idea de negocios. Comienza con
                 una imagen impactante y construye relaciones de negocio con una
                 excelente primera impresión.
@@ -328,7 +328,7 @@ export const Infodiseño = () => {
               <div className=" flex items-center justify-between gap-4">
                 <h3 className="text-xl font-semibold leading-8 text-link-100 ">Básico</h3>
               </div>
-              <p className="mt-5 text-xs leading-6 text-justify text-gray-100">
+              <p className="mt-5 text-xs leading-6 text-justify ">
                 El paquete ideal para iniciar tu idea de negocios. Comienza con
                 una imagen impactante y construye relaciones de negocio con una
                 excelente primera impresión.
@@ -370,31 +370,31 @@ export const Infodiseño = () => {
               </ul>
             </div>
             {/* INTERMEDIO */}
-            <div className="rounded-3xl p-8 xl:p-10 ring-4 ring-link-100 bg-nav-900 ">
+            <div className="rounded-3xl p-8 xl:p-10 ring-4 ring-link-100 bg-slate-600 dark:bg-nav-800 ">
               <div className=" flex items-center justify-between gap-4">
                 <h3 className="text-xl font-semibold leading-8 text-link-100 ">
                   Premium
                 </h3>
-                <p className="rounded-full bg-nav-700 px-3 py-1 text-xs">
+                <p className="rounded-full text-white bg-categoria-200 dark:bg-nav-600 px-3 py-1 text-xs">
                   Más Popular
                 </p>
               </div>
-              <p className="mt-5 text-xs leading-6 text-justify text-gray-100">
+              <p className="mt-5 text-xs leading-6 text-justify text-white ">
                 Nuestro paquete premium está diseñado para cubrir las áreas más
                 necesarias de comunicación y diseño. Si eres un emprendedor con
                 visión a futuro, o quieres darle ese gran impulso a tu marca o
                 empresa ya existente, este paquete es para ti.
               </p>
               <p className="mt-6 flex items-baseline gap-1">
-                <span className="text-4xl font-bold tracking-tight">
+                <span className="text-4xl font-bold tracking-tight text-white">
                   $10,000.00
                 </span>
-                <span className="text-xs font-semibold leading-6">MXN</span>
+                <span className="text-xs font-semibold leading-6 text-white">MXN</span>
               </p>
-              <button className="mt-6 rounded-md bg-btn-400 hover:bg-btn-600 transition-colors duration-150 px-3 py-2 text-center text-lg font-semibold leading-6 w-full">
+              <button className="mt-6 rounded-md bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 px-3 py-2 text-center text-lg font-semibold leading-6 w-full">
                 Comprar ahora
               </button>
-              <ul className="text-xs leading-6 xl:mt-10 mt-8" role="list">
+              <ul className="text-xs text-white leading-6 xl:mt-10 mt-8" role="list">
                 <li className="flex items-center gap-3">
                   <FaCheck className="text-link-100" />
                   25 products
@@ -429,7 +429,7 @@ export const Infodiseño = () => {
                   Emprendedor
                 </h3>
               </div>
-              <p className="mt-5 text-xs leading-6 text-justify text-gray-100">
+              <p className="mt-5 text-xs leading-6 text-justify ">
                 Si buscas iniciar un negocio en forma, o incluso rediseñar la
                 imagen que ya tenías, este paquete es ideal para quienes buscan
                 ir más lejos.
