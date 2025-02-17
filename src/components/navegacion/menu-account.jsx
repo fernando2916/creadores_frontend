@@ -8,13 +8,13 @@ export const MenuAccount = () => {
 
   return (
     <div className="flex items-center justify-center gap-0 sm:gap-2">
-      <button onClick={toggleTheme} className="relative flex items-center outline-none mr-2 md:mr-1 justify-center text-white transition-colors bg-btn-200 rounded-lg h-10 w-10 hover:bg-btn-400 dark:bg-btn-400 dark:text-white dark:hover:bg-btn-600 dark:hover:text-white">
-        <FaSun className="hidden dark:block"/>  
-        <FaMoon className="dark:hidden"/>
+      <button onClick={toggleTheme} className="relative flex items-center outline-none  justify-center transition-colors h-8 w-8 text-slate-400 hover:text-link-100 dark:text-white dark:hover:text-link-100 ">
+        <FaSun className="hidden dark:block text-xl"/>  
+        <FaMoon className="dark:hidden text-xl"/>
       </button>
-      <button className="flex items-center justify-center text-white transition-colors bg-btn-200 rounded-lg h-10 w-10 box-content hover:bg-btn-400 dark:bg-btn-400 dark:text-white dark:hover:bg-btn-600 dark:hover:text-white">
+      <button className="flex items-center justify-center transition-colors h-8 w-8 box-content text-slate-400 hover:text-link-100 dark:text-white dark:hover:text-link-100">
         <Link href="/carrito">
-          <FaShoppingCart className="" />
+          <FaShoppingCart className="text-xl" />
         </Link>
       </button>
       <div className="flex items-center gap-2">

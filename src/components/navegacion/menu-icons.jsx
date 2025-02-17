@@ -4,10 +4,11 @@ import {
   FaFileAlt,
   FaHeart,
   FaLaptopCode,
-  FaSearch,
+  FaMoon,
   FaShoppingBasket,
   FaShoppingCart,
   FaSignInAlt,
+  FaSun,
   FaUser,
   FaUserCircle,
   FaUserCog,
@@ -20,59 +21,49 @@ import {
 } from "../ui/hover-card";
 import { useAuthStore } from '@/hooks/useAuthStore';
 import Link from "next/link";
+import { useTheme } from "@/context/DarkModeProvider";
 
 
 
 export const MenuIcons = () => {
 
   const {user, startLogout} = useAuthStore()
+    const { toggleTheme } = useTheme();
+  
 
   return (
     <div>
-        <ul className="flex items-center justify-center gap-4">
-          <li className="hidden md:flex text-2xl">
-            <FaSearch />
-          </li>
+        <ul className="flex items-center justify-center gap-1 sm:gap-2">
+          <button onClick={toggleTheme} className="relative flex items-center outline-none justify-center transition-colors text-slate-400 hover:text-link-100 dark:text-white dark:hover:text-link-100">
+                 <FaSun className="hidden dark:block text-xl"/>  
+                 <FaMoon className="dark:hidden text-xl"/>
+               </button>
           {/* DESEOS */}
           <div>
-            <button className="flex items-center justify-center text-white transition-colors bg-btn-400 rounded-lg h-10 w-10 box-content hover:bg-btn-600  dark:bg-btn-400 dark:text-white dark:hover:bg-btn-600 dark:hover:text-white">
+            <button className="flex items-center justify-center transition-colors rounded-lg h-8 w-8 text-slate-400 hover:text-link-100 dark:text-white dark:hover:text-link-100">
 
             <Link href='/mi-lista-de-deseos'>
-              <FaHeart  />
+              <FaHeart className="text-xl"  />
             </Link>
             </button>
           </div>
           {/* CARRITO */}
 
-          <HoverCard className="right-5">
-            <HoverCardTrigger className="" href='/carrito'>
-              <FaShoppingCart className="text-2xl hover:text-link-100" />
-              <HoverCardContent className="h-auto">
-                {/* CONTENIDO */}
-                <div className="flex flex-col space-y-2 items-center justify-center">
-                  <p className="justify-center text-gray-400">Tu carrito esta vacío</p>
-                  <button className="w-full flex justify-center py-2 rounded-md text-base font-bold text-white bg-btn-400 hover:bg-btn-600 disabled:bg-btn-600 transition-all ease-in gap-2 items-center">Seguir comprando</button>
-                </div>
-                {/* <div className=" overflow-y-scroll mb-3 h-auto">
-                  <div className="py-2">
-                    <p className="mb-1">Item</p>
-                  </div>
-  
-                <Button className="w-full ">Ir al carrito</Button>
-                </div> */}
-  
-              </HoverCardContent>
-            </HoverCardTrigger>
-          </HoverCard>
+            <Link className="" href='/carrito'>
+            <button  className="flex items-center justify-center transition-colors rounded-lg  text-slate-400 hover:text-link-100 dark:text-white dark:hover:text-link-100" >
+
+              <FaShoppingCart className="text-2xl hover:text-link-100" />              
+            </button>
+            </Link>
           {/* PERFIL */}
           <HoverCard className="">
             <HoverCardTrigger className="hidden md:flex">
-              <FaUser className="text-2xl hover:text-link-100" />
+              <FaUser className="rounded-lg text-xl text-slate-400 hover:text-link-100 dark:text-white dark:hover:text-link-100" />
               <HoverCardContent className="w-[15rem]">
                 {/* CONTENIDO */}
                 <div className=" overflow-y-scroll mb-3 ">
                   <ul className="space-y-1">
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <div className="">
                       <FaUserCircle className="text-3xl"/>
                       </div>
@@ -82,31 +73,31 @@ export const MenuIcons = () => {
                       <span className="text-link-100 text-xs">{user.email}</span>
                       </div>
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <FaBell/>
                       Notificaciones
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <FaHeart/>
                       Lista de deseos
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <FaShoppingBasket/>
                       Mis compras
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <FaLaptopCode/>
                       Mis aprendizaje
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <FaFileAlt/>
                       Facturación
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 rounded-md  flex items-center gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
                       <FaUserCog/>
                       Soporte
                       </li>
-                    <li className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 p-2 gap-2">
+                    <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 gap-2">
                       <button className="flex items-center gap-2" 
                       onClick={startLogout}
                       >

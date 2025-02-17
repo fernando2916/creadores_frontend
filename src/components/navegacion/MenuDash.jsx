@@ -177,7 +177,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
         </li>
       </ul>
       <ul className="p-3 border-b">
-        <div className="flex items-center justify-start pl-7 text-gray-300 gap-3">
+        <div className="flex items-center justify-start pl-7 text-link-500 font-semibold dark:text-slate-400 gap-3">
           <span className="">Nuestros Servicios</span>
         </div>
         <li
@@ -242,7 +242,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
         </li>
       </ul>
       <ul className="p-3 border-b">
-        <div className="flex items-center justify-start pl-7 text-gray-300 gap-3">
+        <div className="flex items-center justify-start pl-7 text-link-500 font-semibold dark:text-slate-400 gap-3">
           <span className="">Más de Emprendedores</span>
         </div>
         <li
