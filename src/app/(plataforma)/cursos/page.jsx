@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {  FaStar } from "react-icons/fa";
 import { Buscador } from "./components/Buscador";
+import { HeaderCursos } from "./components/HeaderCursos";
+import { Universidades } from "./components/Universidades";
 
 export const metadata = {
   title: "Cursos",
@@ -11,6 +13,8 @@ export const metadata = {
 export default function CursosPage() {
   return (
     <>
+    <HeaderCursos/>
+    <Universidades/>
       <main className="pt-[5rem]">
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 px-4 my-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
