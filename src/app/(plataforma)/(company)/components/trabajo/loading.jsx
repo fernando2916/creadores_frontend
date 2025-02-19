@@ -5,7 +5,7 @@ import {
   SkeletonText,
 } from "@/components/ui/skeleton";
 
-export const LoadCard = () => {
+export default function LoadCard() {
   return (
     <>
 

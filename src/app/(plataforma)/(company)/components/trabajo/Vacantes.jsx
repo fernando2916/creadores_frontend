@@ -8,7 +8,7 @@ import { FaCalendar, FaClock, FaDollarSign } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { WorkInfo } from "./WorkInfo";
 import { useJobsStore } from "@/hooks/useJobsStore";
-import { LoadCard } from "./skeleton";
+import LoadCard from "./loading";
 
 
 export const Vacantes = () => {
@@ -41,21 +41,13 @@ export const Vacantes = () => {
     </header>
     <main className="m-5">
       {cargando ? (
-         <>
-         <p className="font-bold text-xl md:text-3xl container mx-auto">
-           Nuestras Vacantes Disponibles
-         </p>
-         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
-            <LoadCard/>
-         </ul>
-       </>
-      ) : isData ? (
-        <>
+               <>
           <p className="font-bold text-xl md:text-3xl container mx-auto">
             Nuestras Vacantes Disponibles
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
-            {vacantes.map((item) => (
+
+            {vacantes?.map((item) => (
               <li key={item.id}>
                 <div className="bg-nav-800 rounded-2xl flex flex-col">
                   <div className="p-10">
@@ -101,7 +93,7 @@ export const Vacantes = () => {
             <Link href="/contacto">
               <button
                 type="button"
-                className="bg-btn-400 hover:bg-btn-600 transition-colors duration-150 rounded-md p-3 mt-5"
+                className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md p-3 mt-5"
               >
                 Solicitar Información
               </button>
