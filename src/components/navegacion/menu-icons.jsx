@@ -70,7 +70,7 @@ export const MenuIcons = () => {
                       <div className="">
                       <p className="text-sm">
                         {user.name } </p>
-                      <span className="text-link-100 text-xs">{user.email}</span>
+                      <span className="text-link-400 dark:textlink-100 font-semibold text-xs">{user.email}</span>
                       </div>
                       </li>
                     <li className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
