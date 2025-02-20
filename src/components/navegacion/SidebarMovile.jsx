@@ -16,7 +16,7 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
   return (
     <aside>
       <div>
-        <button
+        <button type='button'
           className="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 p-3 rounded-md outline-none"
           onClick={toggleMenu}
         >
@@ -27,7 +27,7 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
         className={`w-full bg-gray-900/60 dark:bg-nav-950/60 fixed inset-0 z-50 duration-150 ease-out justify-start items-end 
             ${showMenu ? "left-0" : "-left-full"}`}
       >
-        <button
+        <button type='button'
           className=" bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 p-3 rounded-md outline-none absolute top-5 right-5"
           onClick={toggleMenu}
         >
@@ -49,8 +49,9 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
                   <span className="text-2xl">{user.name} </span>
                   <span className="text-2xl">{user.last_name}</span>
                   <div className="flex items-center gap-1">
-                    <Link href="mi-cuenta" className="flex items-center gap-1">
-                      <span className="text-base text-link-400">Mi Cuenta</span>
+          
+          <Link href="/mi-cuenta/mi-perfil" className="flex items-center gap-1" onClick={toggleMenu} >
+                      <span className="text-base text-link-400">Mi Perfil</span>
                       <FaAngleRight className="text-link-500 font-medium text-lg" />
                     </Link>
                   </div>
@@ -74,7 +75,7 @@ export const SidebarMovile = ({ onClick: toggleMenu, showMenu: showMenu }) => {
                     </div>
                   </div>
                   <Link href="/auth/ingresar" onClick={toggleMenu}>
-                    <button className="flex justify-center items-center mx-auto bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 w-full p-2 rounded-lg transition-colors duration-150">
+                    <button type='button' className="flex justify-center items-center mx-auto bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 w-full p-2 rounded-lg transition-colors duration-150">
                       Ingresar
                     </button>
                   </Link>

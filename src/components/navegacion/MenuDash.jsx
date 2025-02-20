@@ -100,7 +100,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           onClick={toggleMenu}
         >
           <Link
-            href="mis-cursos"
+            href="/mi-cuenta/mis-cursos"
             className="flex items-center gap-3 p-3 text-lg"
           >
             <FaLaptopCode />
@@ -112,7 +112,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           onClick={toggleMenu}
         >
           <Link
-            href="mis-compras"
+            href="/mi-cuenta/mis-compras"
             className="flex items-center gap-3 p-3 text-lg"
           >
             <FaShoppingBag />
@@ -124,7 +124,7 @@ export const MenuDash = ({ onClick: toggleMenu}) => {
           onClick={toggleMenu}
         >
           <Link
-            href="lista-de-deseos"
+            href="/mi-cuenta/mis-deseos"
             className="flex items-center gap-3 p-3 text-lg"
           >
             <FaHeart />
