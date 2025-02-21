@@ -110,6 +110,8 @@ export const FormPassword = () => {
                     error={errors.password}
                   />
                   <button
+              disabled={loading}
+
                     className="absolute right-3 top-3 text-xl outline-none"
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
@@ -141,6 +143,8 @@ export const FormPassword = () => {
                     error={errors.password2}
                   />
                   <button
+              disabled={loading}
+
                     className="absolute right-3 top-3 text-xl outline-none"
                     type="button"
                     onClick={() => setShowPassword2(!showPassword2)}

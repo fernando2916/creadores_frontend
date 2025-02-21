@@ -19,7 +19,7 @@ import {
   onRegisterFail,
   onLoginFail,
 } from "@/store"; 
-import { createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 
 export const useAuthStore = () => {
@@ -143,14 +143,28 @@ export const useAuthStore = () => {
     }
   };
 
-  // const me = async () => {
+  // const me = createAsyncThunk(
+  //   '/auth/me',
+  //   async(_, { rejectedWithValue}) => {
+  //   dispatch(onChecking());
+    
+  //   const token = Cookies.get("accessToken");
+  //     if (!token) {
+  //       dispatch(onLogout());
+  //       return rejectedWithValue("No token found");
+  //     }
+
   //   try {
-  //     const resp = await creadoresApi.post("/auth/me");
-  //     console.log(resp);
+  //     const {data} = await creadoresApi.get("/auth/me");
+  //     dispatch(onLogin(data))
   //   } catch (error) {
   //     console.log(error);
+  //     dispatch(onLogout())
+
+
+  //     return rejectedWithValue(error.response?.data.message || 'Something went wrong' )
   //   }
-  // };
+  // });
 
   // const refresh_token = async () => {
 
@@ -224,14 +238,13 @@ export const useAuthStore = () => {
     onChecking,
     loading,
     
-    //* Métodoa
+    //* Métodos
     startLogin,
     startRegister,
     verify,
     reset_code,
     reset_password,
     new_password,
-    // me,
     refresh_token,
     startLogout,
     

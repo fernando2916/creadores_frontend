@@ -126,6 +126,7 @@ export const Ingresar =() => {
                   error={errors.password}
                 />
                 <button
+                disabled={loading}
                   type="button"
                   className="absolute right-3 top-3 text-xl outline-none"
                   onClick={() => setShowPassword(!showPassword)}

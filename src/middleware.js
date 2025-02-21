@@ -3,11 +3,7 @@ import {NextResponse} from 'next/server'
 
 const protectedRoutes = [
   '/mi-cuenta/:path*', 
-  '/carrito/:path*', 
-  '/mis-cursos/:*path', 
-  '/lista-de-deseos', 
-  '/mis-compras',
-  '/notificaciones',
+  '/carrito/checkout', 
   '/facturacion',
 ]
 
