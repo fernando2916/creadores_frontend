@@ -11,7 +11,7 @@ import { useJobsStore } from "@/hooks/useJobsStore";
 import LoadCard from "./LoadCard";
 
 export const Vacantes = () => {
-  const { vacantes = [], viewJobs, isData, cargando } = useJobsStore();
+  const { vacantes, viewJobs, cargando } = useJobsStore();
 
   useEffect(() => {
     viewJobs();
@@ -51,7 +51,7 @@ export const Vacantes = () => {
             <p className="font-bold text-xl md:text-3xl container mx-auto">
               Nuestras Vacantes Disponibles
             </p>
-              {Array.isArray(Vacantes) && vacantes.map((item) => (
+              {vacantes.map((item) => (
                 <li key={item.id}>
                   <div className="bg-nav-800 rounded-2xl flex flex-col">
                     <div className="p-10">
