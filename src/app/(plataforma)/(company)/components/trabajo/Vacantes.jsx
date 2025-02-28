@@ -47,10 +47,11 @@ export const Vacantes = () => {
               ))}
             </ul>
           ) : vacantes.length > 0 ? (
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
+            <>
             <p className="font-bold text-xl md:text-3xl container mx-auto">
               Nuestras Vacantes Disponibles
             </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 lg:container mx-auto">
               {vacantes.map((item) => (
                 <li key={item.id}>
                   <div className="bg-nav-800 rounded-2xl flex flex-col">
@@ -87,7 +88,7 @@ export const Vacantes = () => {
                 </li>
               ))}
             </ul>
-          
+            </>          
         ) : (
           <>
             <div className="flex flex-col items-center justify-center my-20">

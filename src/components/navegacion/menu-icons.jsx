@@ -59,7 +59,7 @@ export const MenuIcons = () => {
               {/* CONTENIDO */}
               <div className=" overflow-y-scroll mb-3 ">
                 <ul className="space-y-1">
-                  <li className="p-2 rounded-md  flex items-center gap-2">
+                  <li className="p-2 rounded-md flex items-center gap-2">
                     <div className="">
                       <FaUserCircle className="text-3xl" />
                     </div>
@@ -73,7 +73,7 @@ export const MenuIcons = () => {
 
                   <li>
                   <Link href="/notificaciones">
-                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md flex items-center gap-2 w-full">
                       <FaBell />
                       Notificaciones
                     </button>
@@ -83,7 +83,7 @@ export const MenuIcons = () => {
                   <li>
 
                   <Link href="/mi-cuenta/mi-perfil">
-                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2  w-full">
                       <FaUserCircle />
                       Mi perfil
                     </button>
@@ -93,7 +93,7 @@ export const MenuIcons = () => {
                   <li>
 
                   <Link href="/mi-cuenta/mis-compras">
-                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2  w-full">
                       <FaShoppingBasket />
                       Mis compras
                     </button>
@@ -103,17 +103,17 @@ export const MenuIcons = () => {
                   <li>
 
                   <Link href="/mi-cuenta/mis-cursos">
-                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2  w-full">
                       <FaLaptopCode />
                       Mis aprendizaje
                     </button>
                   </Link>
                   </li>
 
-                  <li>
+                  <li >
 
                   <Link href="/facturacion">
-                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2">
+                    <button type='button' className="hover:bg-slate-400 dark:hover:bg-nav-700 p-2 rounded-md  flex items-center gap-2  w-full">
                       <FaFileAlt />
                       Facturación
                     </button>
